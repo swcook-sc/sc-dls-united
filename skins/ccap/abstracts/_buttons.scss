@@ -1,0 +1,58 @@
+@use './fonts.scss' as f;
+@use './palette.scss' as p;
+
+$button-font-family: f.$font-primary-family;
+
+$button-primary-color-background-normal:  p.$ccap-palette-color-blue;
+$button-primary-color-background-focus: p.$ccap-palette-color-blue-hover;
+$button-primary-color-background-active: p.$ccap-palette-color-blue-active;
+$button-primary-color-background-disabled: p.$ccap-palette-color-gray-400;
+
+$button-primary-color-foreground-normal: p.$ccap-palette-color-white;
+$button-primary-color-foreground-focus: p.$ccap-palette-color-white;
+$button-primary-color-foreground-active: p.$ccap-palette-color-white;
+$button-primary-color-foreground-disabled: p.$ccap-palette-color-white;
+
+$button-secondary-color-foreground-normal:  p.$ccap-palette-color-blue;
+$button-secondary-color-foreground-focus: p.$ccap-palette-color-blue-hover;
+$button-secondary-color-foreground-active: p.$ccap-palette-color-blue-active;
+$button-secondary-color-foreground-disabled: p.$ccap-palette-color-gray-400;
+
+$button-secondary-color-background-normal: p.$ccap-palette-color-white;
+$button-secondary-color-background-focus: p.$ccap-palette-color-white;
+$button-secondary-color-background-active: p.$ccap-palette-color-white;
+$button-secondary-color-background-disabled: p.$ccap-palette-color-white;
+$button-colors: 
+$button-primary-color-foreground-normal, $button-primary-color-foreground-focus, $button-primary-color-foreground-active, $button-primary-color-foreground-disabled,
+$button-primary-color-background-normal, $button-primary-color-background-focus, $button-primary-color-background-active, $button-primary-color-background-disabled,
+$button-secondary-color-foreground-normal, $button-secondary-color-foreground-focus, $button-secondary-color-foreground-active, $button-secondary-color-foreground-disabled,
+$button-secondary-color-background-normal, $button-secondary-color-background-focus, $button-secondary-color-background-active, $button-secondary-color-background-disabled;
+
+
+$button-border-radius: 0.75rem;
+$button-font-size: 1.325rem;
+$button-height: 2.62rem;
+$button-padding-side: 3rem;
+$button-padding-x: 1.6rem;
+$button-shadow: 0px 3px 4px rgba(black, 0.12);
+$button-min-width: 12.5rem;
+
+// secondary button
+$button-secondary-border: 1px solid;
+$button-secondary-border-active: 2px solid;
+
+// mobile button
+$button-mobile-width: 21.5rem;
+$button-mobile-padding-side: 6.5rem;
+
+// small button
+$button-small-padding: 1.6rem;;
+$button-small-height: 2rem;
+$button-small-font-size: 1.8rem;
+$button-small-min-width: 6rem;
+$button-small-border-radius: .75rem;
+
+// round button
+$button-round-corners: .75rem;
+$button-round-padding: 2rem;
+$button-round-padding-side: 1.2rem;

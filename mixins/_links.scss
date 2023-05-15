@@ -1,0 +1,60 @@
+@mixin createLink($normal, $hover, $pressed, $visited, $disabled) {
+    font-family: inherit;
+    font-size: inherit;
+    color: $normal;
+
+    &__hover__,
+    &:hover,
+    &:focus {
+        color: $hover;
+    }
+
+    &__pressed__,
+    &:active {
+        color: $pressed;
+    }
+
+    &__visited__,
+    &:visited {
+        color: $visited;
+    }
+
+    &__disabled__,
+    &[disabled]{
+        color: $disabled;
+        cursor:default;
+    }
+}
+
+@mixin build-links($link-primary-color, $link-primary-color-hover , 
+$link-primary-color-pressed, $link-primary-color-visited, $link-primary-color-disabled, $link-secondary-color, $link-secondary-color-hover , 
+$link-secondary-color-pressed, $link-secondary-color-visited, $link-secondary-color-disabled) {
+
+.link {
+    cursor: pointer;
+    @include createLink($link-primary-color, $link-primary-color-hover , 
+    $link-primary-color-pressed, $link-primary-color-visited, $link-primary-color-disabled);
+    
+        &.secondary {
+            cursor: pointer;
+            @include createLink($link-secondary-color, $link-secondary-color-hover , 
+            $link-secondary-color-pressed, $link-secondary-color-visited, $link-secondary-color-disabled);       
+        }
+    }
+    
+    button {
+        &.link {
+            display: contents;
+            background-color: inherit;
+            border: 0;
+    
+            @include createLink($link-primary-color, $link-primary-color-hover , 
+            $link-primary-color-pressed, $link-primary-color-visited, $link-primary-color-disabled);
+        
+            &.secondary {
+                @include createLink($link-secondary-color, $link-secondary-color-hover , 
+                $link-secondary-color-pressed, $link-secondary-color-visited, $link-secondary-color-disabled);       
+            }
+        }
+    }
+}

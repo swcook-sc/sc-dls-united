@@ -1,0 +1,43 @@
+@mixin build-fonts($primary, $secondary, $headline, $highlight) {
+
+        .primary-font {
+            font-family: nth($primary, 1) ; //first element is the family name
+        }
+    
+        .secondary-font {
+            font-family: nth($secondary, 1);
+        }
+    
+        .headline-font {
+            font-family: nth($headline, 1);
+        }
+    
+    
+    .highlighted-text {
+        color: $highlight;
+    }	
+}
+
+@mixin font-face($family, $file, $path, $weight: normal, $style: normal) {
+    @font-face {
+        font-family: $family;
+        src: url($path + $file);
+        font-weight: $weight;
+        font-style: $style;
+    }
+}
+
+@mixin declare-fonts(   $family, $path, 
+
+                        $regularFile, $boldFile, $lightFile, $italicFile, $boldItalicFile, $lightItalicFile,
+
+                        $fontWeightRegular, $fontWeightBold, $fontWeightLight) {
+
+                            @include font-face($family, $regularFile, $path, $fontWeightRegular );
+                            @include font-face($family, $boldFile, $path, $fontWeightBold );
+                            @include font-face($family, $lightFile, $path, $fontWeightLight );
+                            @include font-face($family, $italicFile, $path, $fontWeightRegular, italic );
+                            @include font-face($family, $boldItalicFile, $path, $fontWeightBold, italic );
+                            @include font-face($family, $lightItalicFile, $path, $fontWeightLight, italic );
+        
+    }

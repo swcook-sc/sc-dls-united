@@ -1,0 +1,17 @@
+@use './palette' as p;
+@use './fonts' as f;
+
+// colors
+$header-background-color: p.$sc-palette-color-boston;
+$header-foreground-color: p.$sc-palette-color-white;
+$header-column-head-color: p.$sc-palette-color-white;
+
+// fonts
+$header-font-family: f.$font-headline-family;
+$header-mobile-font-size: 2rem;
+$header-tablet-font-size: 2rem;
+$header-desktop-font-size: 2rem;
+
+$header-mobile-height: 4rem;
+$header-tablet-height: 6rem;
+$header-desktop-height: 6rem;

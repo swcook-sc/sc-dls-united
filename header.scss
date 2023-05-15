@@ -1,0 +1,58 @@
+@import './variables';
+.header {
+    display: grid;
+    grid-template-columns: 40px auto 40px;
+    grid-template-areas:
+        "balance branding hamburger";
+
+    height: $header-mobile-height;
+    width: 100%;
+    font-family: $header-font-family;
+    font-size: $header-mobile-font-size;
+
+    background-color: $header-background-color;
+    color: $header-foreground-color;
+
+    &__balance {
+        grid-area: balance;
+    }
+
+    &__branding {
+        grid-area: branding;
+        align-self: center;
+        place-content: center;
+        padding-bottom: 16px;
+
+        position: relative;
+        top: 6px;
+        left: 30px;
+
+        &::before {
+            content: 'santander';
+            font-family: $font-icon-family;
+            font-size: auto;
+            padding-right: 10px;
+
+            position: relative;
+            top: 4px;
+        }
+
+    }
+
+    &__hamburger {
+        grid-area: hamburger;
+        font-family: $font-icon-family;
+        font-size: 3rem;
+    
+        &--item {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-direction: column;
+
+            position: relative;
+            top: 5px;
+            right: 5px;
+        }
+    }
+}

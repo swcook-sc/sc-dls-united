@@ -1,0 +1,163 @@
+@use './abstracts' as a;
+@use '../../mixins/fonts' as font-mix;
+@use '../../mixins/typography' as type-mix;
+@use '../../mixins/links' as link-mix;
+@use '../../mixins/buttons' as but-mix;
+@use '../../mixins/lists' as list-mix;
+
+@include font-mix.declare-fonts(a.$font-primary...);
+@include font-mix.declare-fonts(a.$font-secondary...);
+@include font-mix.declare-fonts(a.$font-headline...);
+
+.ccap-theme {
+    font-family: a.$font-primary-family;
+    font-size: 2rem;
+
+    background-color: rgba(a.$ccap-palette-color-primary, .12);
+    $someValue: 'Chrysler Capital';
+
+    @include font-mix.build-fonts(a.$font-primary, a.$font-secondary, a.$font-headline, a.$text-highlight-color);
+    @include font-mix.declare-fonts(a.$font-icon...);
+    @include type-mix.build-typography(a.$font-headline-family, a.$font-primary-family, a.$font-weight-bold, a.$text-primary-color);
+
+    @include link-mix.build-links(a.$links-colors...);
+    @include but-mix.build-buttons(".button",       a.$font-secondary-family,a.$button-font-size, a.$button-height, a.$button-min-width, a.$button-border-radius, a.$button-shadow, a.$button-padding-x, a.$button-padding-side,  a.$button-colors...);
+    @include but-mix.build-buttons(".button-small", a.$font-secondary-family, a.$button-font-size, a.$button-small-height, a.$button-small-min-width, a.$button-small-border-radius, a.$button-shadow, a.$button-padding-x, a.$button-padding-side, a.$button-colors...);
+    @include but-mix.build-buttons(".button-round", a.$font-icon-family, a.$button-font-size, a.$button-round-padding, a.$button-round-padding, a.$button-small-border-radius, a.$button-shadow, a.$button-round-padding, a.$button-round-padding-side, a.$button-colors...);
+    @include list-mix.build-lists(a.$font-secondary-family, a.$font-icon-family, a.$text-highlight-color, 'send');
+
+
+    $input-background-color: a.$ccap-palette-color-white;
+    $input-font-family: a.$font-primary-family;
+    $input-text-color: a.$text-primary-color;
+    $input-border-color: a.$ccap-palette-color-blue;
+    $input-border-color-active: a.$ccap-palette-color-blue-active;;
+    $input-border-color-disabled: a.$ccap-palette-color-gray-700;
+    $input-accent-color: a.$ccap-palette-color-primary;
+    $input-border-radius: 4px;
+    $input-icon-font-family: a.$font-icon-family;
+    $input-checkbox-character: 'checkmark';
+
+    input[type="text"],
+    input[type="date"],
+    input[type="email"],
+    input[type="month"],
+    input[type="number"],
+    input[type="tel"],
+    input[type="week"],
+    input[type="password"] {
+        font-family: a.$font-secondary-family;
+        font-size: 2rem;
+        color: a.$text-primary-color;
+        width: 50rem;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid $input-border-color;
+        border-radius: $input-border-radius;
+        box-sizing: border-box;
+        transition: all 0.3s;
+
+
+        &:focus {
+            outline: 1px solid $input-border-color-active;
+        }
+
+        &:hover {
+            outline: 1px solid $input-border-color-active;
+
+        }
+    }
+
+    .check-box {
+        input[type="checkbox"]:hover+label:hover {
+            &::before {
+                border: 1px solid $input-accent-color;
+                transition: all 0.3s;
+            }
+        }
+
+        input[type="checkbox"]:checked+label {
+            &::before {
+                color: $input-accent-color;
+                border: 1px solid $input-accent-color;
+            }
+        }
+
+        input[type="checkbox"] {
+            display: none;
+        }
+
+        label {
+            &::before {
+                position: relative;
+                top: 0.75rem;
+                left: 0px;
+                font-size: 1.5em;
+                margin-right: 1rem;
+
+                border: 1px solid $input-border-color-active;
+                border-radius: 4px;
+                width: 1.75rem;
+                height: 1.75rem;
+
+                content: "checkmark";
+
+                font-family: a.$font-icon-family;
+                color: white;
+            }
+        }
+    }
+
+    .radio-button {
+
+        input[type="radio"] {
+            display: none;
+
+            &:checked + label::before {
+                box-shadow: 0 0 0 1px $input-accent-color;
+
+                background: $input-accent-color;
+            }
+
+            &:hover + label::before {
+                box-shadow: 0 0 0 1px $input-accent-color;
+            }
+
+        }
+
+        label {
+            cursor: pointer;
+            margin-bottom: 0;
+
+            &::before {
+                display: inline-block;
+                position: relative;
+                top: 5px;
+                content: '';
+                height: 2rem;
+                width: 2rem;
+                border-radius: 50%;
+
+                border: 5px solid white;
+                box-shadow: 0 0 0 1px $input-border-color-active;
+                margin-right: 1.5rem;
+                transition: all 0.3s;
+
+            }
+        }
+    }
+
+    progress {
+        accent-color: $input-accent-color;
+    }
+
+    .item {
+        background-color: a.$ccap-palette-color-primary;
+        color: white;
+
+        &::before {
+            content: $someValue;
+        }
+    }
+}

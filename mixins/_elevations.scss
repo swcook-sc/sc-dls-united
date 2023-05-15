@@ -1,0 +1,19 @@
+$elevation-1: 0px 1px 4px rgba(0, 0, 0, 0.12);
+$elevation-2: 0px 3px 4px rgba(0, 0, 0, 0.12);
+$elevation-3: 0px 5px 8px rgba(0, 0, 0, 0.12);
+$elevation-4: 0px 16px 32px -12px rgba(0, 0, 0, 0.16);
+$elevation-5: 0px 32px 32px -12px rgba(0, 0, 0, 0.16);
+
+@mixin elevations($number:1) {
+	@if ($number == 1) {
+		box-shadow: $elevation-1;
+	} @else if ($number == 2) {
+		box-shadow: $elevation-2;
+	} @else if ($number == 3) {
+		box-shadow: $elevation-3;
+	} @else if ($number == 4) {
+		box-shadow: $elevation-4;
+	} @else if ($number == 5) {
+		box-shadow: $elevation-5;
+	}
+}

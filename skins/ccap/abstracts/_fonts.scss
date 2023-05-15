@@ -1,0 +1,39 @@
+$font-weight-bold: 700;
+$font-weight-regular: 300;
+$font-weight-light: 100;
+
+$font-primary-path: '../skins/ccap/fonts/Roboto/';
+$font-primary-family: 'Roboto';
+$font-primary-file-regular: 'roboto-v29-latin-300.woff';
+$font-primary-file-bold: 'roboto-v29-latin-700.woff';
+$font-primary-file-light: 'roboto-v29-latin-300.woff';
+$font-primary-file-italic: 'roboto-v29-latin-300italic.woff';
+$font-primary-file-bold-italic: 'roboto-v29-latin-700italic.woff';
+$font-primary-file-light-italic: 'roboto-v29-latin-300italic.woff';
+$font-primary: $font-primary-family,$font-primary-path, $font-primary-file-regular, $font-primary-file-bold, $font-primary-file-light, $font-primary-file-italic, $font-primary-file-bold-italic, $font-primary-file-light-italic, $font-weight-regular, $font-weight-bold, $font-weight-light;
+
+$font-secondary-path: '../skins/ccap/fonts/Roboto/';
+$font-secondary-family: 'Roboto';
+$font-secondary-file-regular: 'roboto-v29-latin-300.woff';
+$font-secondary-file-bold: 'roboto-v29-latin-700.woff';
+$font-secondary-file-light: 'roboto-v29-latin-300.woff';
+$font-secondary-file-italic: 'roboto-v29-latin-300italic.woff';
+$font-secondary-file-bold-italic: 'roboto-v29-latin-700italic.woff';
+$font-secondary-file-light-italic: 'roboto-v29-latin-300italic.woff';
+$font-secondary: $font-secondary-family,$font-secondary-path, $font-secondary-file-regular, $font-secondary-file-bold, $font-secondary-file-light, $font-secondary-file-italic, $font-secondary-file-bold-italic, $font-secondary-file-light-italic, $font-weight-regular, $font-weight-bold, $font-weight-light;
+
+$font-headline-path: '../skins/ccap/fonts/Roboto/';
+$font-headline-family: 'Roboto';
+$font-headline-file-regular: 'roboto-v29-latin-300.woff';
+$font-headline-file-bold: 'roboto-v29-latin-700.woff';
+$font-headline-file-light: 'roboto-v29-latin-300.woff';
+$font-headline-file-italic: 'roboto-v29-latin-300italic.woff';
+$font-headline-file-bold-italic: 'roboto-v29-latin-700italic.woff';
+$font-headline-file-light-italic: 'roboto-v29-latin-300italic.woff';
+$font-headline: $font-headline-family,$font-headline-path, $font-headline-file-regular, $font-headline-file-bold, $font-headline-file-light, $font-headline-file-italic, $font-headline-file-bold-italic, $font-headline-file-light-italic, $font-weight-regular, $font-weight-bold, $font-weight-light;
+
+$font-icon-path: '../skins/ccap/fonts/SantanderIcons/';
+$font-icon-family: 'Font Awesome';
+$font-icon-file: 'SantanderIcons.ttf';
+$font-icon: $font-icon-family, $font-icon-path, $font-icon-file, $font-icon-file,$font-icon-file,$font-icon-file,$font-icon-file,$font-icon-file,$font-weight-regular, $font-weight-bold, $font-weight-light;
+

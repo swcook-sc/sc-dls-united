@@ -1,0 +1,135 @@
+$ccap-palette-color-white:    #ffffff;
+$ccap-palette-color-gray-100: #f8f9fa;
+$ccap-palette-color-gray-200: #e9ecef;
+$ccap-palette-color-gray-300: #dee2e6;
+$ccap-palette-color-gray-400: #ced4da;
+$ccap-palette-color-gray-500: #adb5bd;
+$ccap-palette-color-gray-600: #6c757d;
+$ccap-palette-color-gray-700: #495057;
+$ccap-palette-color-gray-800: #343a40;
+$ccap-palette-color-gray-900: #212529;
+$ccap-palette-color-black:    #000000;
+
+$ccap-palette-color-blue: #077bba;
+$ccap-palette-color-blue-hover: #069;
+$ccap-palette-color-blue-active: #005580;
+
+$ccap-palette-color-indigo:  #6610f2;
+$ccap-palette-color-purple:  #6f42c1;
+$ccap-palette-color-pink:    #d63384;
+$ccap-palette-color-red:     #dc3545;
+$ccap-palette-color-orange:  #fd7e14;
+$ccap-palette-color-yellow:  #ffc107;
+$ccap-palette-color-green:   #198754;
+$ccap-palette-color-teal:    #20c997;
+$ccap-palette-color-cyan:    #0dcaf0;
+
+
+$ccap-palette-color-blue-100: tint-color($ccap-palette-color-blue, 80%);
+$ccap-palette-color-blue-200: tint-color($ccap-palette-color-blue, 60%);
+$ccap-palette-color-blue-300: tint-color($ccap-palette-color-blue, 40%);
+$ccap-palette-color-blue-400: tint-color($ccap-palette-color-blue, 20%);
+$ccap-palette-color-blue-500: $ccap-palette-color-blue;
+$ccap-palette-color-blue-600: shade-color($ccap-palette-color-blue, 20%);
+$ccap-palette-color-blue-700: shade-color($ccap-palette-color-blue, 40%);
+$ccap-palette-color-blue-800: shade-color($ccap-palette-color-blue, 60%);
+$ccap-palette-color-blue-900: shade-color($ccap-palette-color-blue, 80%);
+
+$ccap-palette-color-indigo-100: tint-color($ccap-palette-color-indigo, 80%);
+$ccap-palette-color-indigo-200: tint-color($ccap-palette-color-indigo, 60%);
+$ccap-palette-color-indigo-300: tint-color($ccap-palette-color-indigo, 40%);
+$ccap-palette-color-indigo-400: tint-color($ccap-palette-color-indigo, 20%);
+$ccap-palette-color-indigo-500: $ccap-palette-color-indigo !default;
+$ccap-palette-color-indigo-600: shade-color($ccap-palette-color-indigo, 20%);
+$ccap-palette-color-indigo-700: shade-color($ccap-palette-color-indigo, 40%);
+$ccap-palette-color-indigo-800: shade-color($ccap-palette-color-indigo, 60%);
+$ccap-palette-color-indigo-900: shade-color($ccap-palette-color-indigo, 80%);
+
+$ccap-palette-color-purple-100: tint-color($ccap-palette-color-purple, 80%);
+$ccap-palette-color-purple-200: tint-color($ccap-palette-color-purple, 60%);
+$ccap-palette-color-purple-300: tint-color($ccap-palette-color-purple, 40%);
+$ccap-palette-color-purple-400: tint-color($ccap-palette-color-purple, 20%);
+$ccap-palette-color-purple-500: $ccap-palette-color-purple;
+$ccap-palette-color-purple-600: shade-color($ccap-palette-color-purple, 20%);
+$ccap-palette-color-purple-700: shade-color($ccap-palette-color-purple, 40%);
+$ccap-palette-color-purple-800: shade-color($ccap-palette-color-purple, 60%);
+$ccap-palette-color-purple-900: shade-color($ccap-palette-color-purple, 80%);
+
+$ccap-palette-color-pink-100: tint-color($ccap-palette-color-pink, 80%);
+$ccap-palette-color-pink-200: tint-color($ccap-palette-color-pink, 60%);
+$ccap-palette-color-pink-300: tint-color($ccap-palette-color-pink, 40%);
+$ccap-palette-color-pink-400: tint-color($ccap-palette-color-pink, 20%);
+$ccap-palette-color-pink-500: $ccap-palette-color-pink;
+$ccap-palette-color-pink-600: shade-color($ccap-palette-color-pink, 20%);
+$ccap-palette-color-pink-700: shade-color($ccap-palette-color-pink, 40%);
+$ccap-palette-color-pink-800: shade-color($ccap-palette-color-pink, 60%);
+$ccap-palette-color-pink-900: shade-color($ccap-palette-color-pink, 80%);
+
+$ccap-palette-color-red-100: tint-color($ccap-palette-color-red, 80%);
+$ccap-palette-color-red-200: tint-color($ccap-palette-color-red, 60%);
+$ccap-palette-color-red-300: tint-color($ccap-palette-color-red, 40%);
+$ccap-palette-color-red-400: tint-color($ccap-palette-color-red, 20%);
+$ccap-palette-color-red-500: $ccap-palette-color-red;
+$ccap-palette-color-red-600: shade-color($ccap-palette-color-red, 20%);
+$ccap-palette-color-red-700: shade-color($ccap-palette-color-red, 40%);
+$ccap-palette-color-red-800: shade-color($ccap-palette-color-red, 60%);
+$ccap-palette-color-red-900: shade-color($ccap-palette-color-red, 80%);
+
+$ccap-palette-color-orange-100: tint-color($ccap-palette-color-orange, 80%);
+$ccap-palette-color-orange-200: tint-color($ccap-palette-color-orange, 60%);
+$ccap-palette-color-orange-300: tint-color($ccap-palette-color-orange, 40%);
+$ccap-palette-color-orange-400: tint-color($ccap-palette-color-orange, 20%);
+$ccap-palette-color-orange-500: $ccap-palette-color-orange;
+$ccap-palette-color-orange-600: shade-color($ccap-palette-color-orange, 20%);
+$ccap-palette-color-orange-700: shade-color($ccap-palette-color-orange, 40%);
+$ccap-palette-color-orange-800: shade-color($ccap-palette-color-orange, 60%);
+$ccap-palette-color-orange-900: shade-color($ccap-palette-color-orange, 80%);
+
+$ccap-palette-color-yellow-100: tint-color($ccap-palette-color-yellow, 80%);
+$ccap-palette-color-yellow-200: tint-color($ccap-palette-color-yellow, 60%);
+$ccap-palette-color-yellow-300: tint-color($ccap-palette-color-yellow, 40%);
+$ccap-palette-color-yellow-400: tint-color($ccap-palette-color-yellow, 20%);
+$ccap-palette-color-yellow-500: $ccap-palette-color-yellow;
+$ccap-palette-color-yellow-600: shade-color($ccap-palette-color-yellow, 20%);
+$ccap-palette-color-yellow-700: shade-color($ccap-palette-color-yellow, 40%);
+$ccap-palette-color-yellow-800: shade-color($ccap-palette-color-yellow, 60%);
+$ccap-palette-color-yellow-900: shade-color($ccap-palette-color-yellow, 80%);
+
+$ccap-palette-color-green-100: tint-color($ccap-palette-color-green, 80%);
+$ccap-palette-color-green-200: tint-color($ccap-palette-color-green, 60%);
+$ccap-palette-color-green-300: tint-color($ccap-palette-color-green, 40%);
+$ccap-palette-color-green-400: tint-color($ccap-palette-color-green, 20%);
+$ccap-palette-color-green-500: $ccap-palette-color-green;
+$ccap-palette-color-green-600: shade-color($ccap-palette-color-green, 20%);
+$ccap-palette-color-green-700: shade-color($ccap-palette-color-green, 40%);
+$ccap-palette-color-green-800: shade-color($ccap-palette-color-green, 60%);
+$ccap-palette-color-green-900: shade-color($ccap-palette-color-green, 80%);
+
+$ccap-palette-color-teal-100: tint-color($ccap-palette-color-teal, 80%);
+$ccap-palette-color-teal-200: tint-color($ccap-palette-color-teal, 60%);
+$ccap-palette-color-teal-300: tint-color($ccap-palette-color-teal, 40%);
+$ccap-palette-color-teal-400: tint-color($ccap-palette-color-teal, 20%);
+$ccap-palette-color-teal-500: $ccap-palette-color-teal;
+$ccap-palette-color-teal-600: shade-color($ccap-palette-color-teal, 20%);
+$ccap-palette-color-teal-700: shade-color($ccap-palette-color-teal, 40%);
+$ccap-palette-color-teal-800: shade-color($ccap-palette-color-teal, 60%);
+$ccap-palette-color-teal-900: shade-color($ccap-palette-color-teal, 80%);
+
+$ccap-palette-color-cyan-100: tint-color($ccap-palette-color-cyan, 80%);
+$ccap-palette-color-cyan-200: tint-color($ccap-palette-color-cyan, 60%);
+$ccap-palette-color-cyan-300: tint-color($ccap-palette-color-cyan, 40%);
+$ccap-palette-color-cyan-400: tint-color($ccap-palette-color-cyan, 20%);
+$ccap-palette-color-cyan-500: $ccap-palette-color-cyan;
+$ccap-palette-color-cyan-600: shade-color($ccap-palette-color-cyan, 20%);
+$ccap-palette-color-cyan-700: shade-color($ccap-palette-color-cyan, 40%);
+$ccap-palette-color-cyan-800: shade-color($ccap-palette-color-cyan, 60%);
+$ccap-palette-color-cyan-900: shade-color($ccap-palette-color-cyan, 80%);
+
+$ccap-palette-color-primary:       $ccap-palette-color-blue;
+$ccap-palette-color-secondary:     $ccap-palette-color-gray-600;
+$ccap-palette-color-success:       $ccap-palette-color-green;
+$ccap-palette-color-info:          $ccap-palette-color-cyan;
+$ccap-palette-color-warning:       $ccap-palette-color-yellow;
+$ccap-palette-color-danger:        $ccap-palette-color-red;
+$ccap-palette-color-light:         $ccap-palette-color-gray-100;
+$ccap-palette-color-dark:          $ccap-palette-color-gray-900;

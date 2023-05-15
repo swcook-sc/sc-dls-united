@@ -1,0 +1,17 @@
+@use './palette.scss' as p;
+
+$link-primary-color: p.$ccap-palette-color-blue;
+$link-primary-color-hover: p.$ccap-palette-color-blue-hover;
+$link-primary-color-pressed: p.$ccap-palette-color-blue-active;
+$link-primary-color-visited: p.$ccap-palette-color-blue;
+$link-primary-color-disabled: p.$ccap-palette-color-gray-400;
+
+$link-secondary-color: p.$ccap-palette-color-blue;
+$link-secondary-color-hover: p.$ccap-palette-color-blue-hover;
+$link-secondary-color-pressed: p.$ccap-palette-color-blue-active;
+$link-secondary-color-visited: p.$ccap-palette-color-blue;
+$link-secondary-color-disabled: p.$ccap-palette-color-gray-400;
+
+$links-colors: 
+$link-primary-color, $link-primary-color-hover, $link-primary-color-pressed, $link-primary-color-visited, $link-primary-color-disabled,
+$link-secondary-color, $link-secondary-color-hover, $link-secondary-color-pressed, $link-secondary-color-visited, $link-secondary-color-disabled;

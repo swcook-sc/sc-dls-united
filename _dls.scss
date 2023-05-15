@@ -1,0 +1,22 @@
+@use './mixins/fonts' as mix;
+@use './skins/sc/abstracts/' as sc;
+@use './skins/ccap/abstracts/' as ccap;
+
+
+
+
+
+
+
+html {
+   // color-scheme: light dark;
+    font-size: 10px;
+}
+
+body {
+    margin: 0;
+}
+
+.no-display {
+    display: none;
+}

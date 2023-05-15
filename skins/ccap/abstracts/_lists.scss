@@ -1,0 +1,8 @@
+@use './fonts' as f;
+@use './palette' as p;
+@use './typography' as t;
+
+$checklist-font-family: f.$font-secondary-family;
+$checklist-icon: 'send';
+$checklist-icon-color: t.$text-highlight-color;
+$checklist-icon-font: f.$font-icon-family;

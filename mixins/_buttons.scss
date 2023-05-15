@@ -1,0 +1,88 @@
+$cursor-disabled: not-allowed;
+
+@mixin build-buttons($selector, $font-family, $font-size, $height, $min-width, $border-radius, $button-shadow, $padding-x, $padding-y,
+                    $button-primary-color-foreground-normal, $button-primary-color-foreground-focus, $button-primary-color-foreground-active, $button-primary-color-foreground-disabled,
+                    $button-primary-color-background-normal, $button-primary-color-background-focus, $button-primary-color-background-active, $button-primary-color-background-disabled,
+                    $button-secondary-color-foreground-normal, $button-secondary-color-foreground-focus, $button-secondary-color-foreground-active, $button-secondary-color-foreground-disabled,
+                    $button-secondary-color-background-normal, $button-secondary-color-background-focus, $button-secondary-color-background-active, $button-secondary-color-background-disabled
+) {
+    #{$selector} {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        touch-action: manipulation;
+        cursor: pointer;
+        background-image: none;
+        border: none;
+
+        font-family: $font-family;
+        height: $height;
+        min-width: $min-width;
+        background-color: $button-primary-color-background-normal;
+        border-radius: $border-radius;
+        color: $button-primary-color-foreground-normal;
+
+        padding-top: $padding-x;
+        padding-bottom: $padding-x;
+        padding-left: $padding-y;
+        padding-right: $padding-y;
+
+        font-size: $font-size;
+
+        &__hover__,
+        &:hover,
+        &:focus {
+            background-color: $button-primary-color-background-focus;
+            color: $button-primary-color-foreground-focus;
+            transition: 350ms;
+        }
+
+        &__active__,
+        &:active {
+            background-color: $button-primary-color-background-focus;
+            color: $button-primary-color-foreground-focus;
+            font-weight: 700;
+            box-shadow: $button-shadow;
+        }
+    
+        &[disabled],
+        fieldset[disabled] & {
+            cursor: $cursor-disabled;
+            background-color: $button-primary-color-background-disabled;
+            color: $button-primary-color-foreground-disabled;
+        }
+
+        &.secondary {
+            background-color: $button-secondary-color-background-normal;
+            color: $button-secondary-color-foreground-normal;
+            outline: 1px solid $button-secondary-color-foreground-normal;
+
+            &__hover__,
+            &:hover,
+            &:focus {
+                outline: 2px solid $button-secondary-color-foreground-focus;
+                color: $button-secondary-color-foreground-focus;
+                background-color: $button-secondary-color-background-focus;
+                transition: 350ms;
+            }
+    
+            &__active__,
+            &:active {
+                outline: 2px solid $button-secondary-color-foreground-active;
+                color: $button-secondary-color-foreground-active;
+                background-color: $button-secondary-color-background-active;;
+                font-weight: 700;
+                box-shadow: $button-shadow;
+            }
+        
+            &[disabled],
+            fieldset[disabled] & {
+                outline: 2px solid $button-secondary-color-foreground-disabled;
+                cursor: $cursor-disabled;
+                background-color: $button-secondary-color-background-disabled;
+                color: $button-secondary-color-foreground-disabled;
+            }
+
+        }
+    }
+}

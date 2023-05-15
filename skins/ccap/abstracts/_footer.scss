@@ -1,0 +1,4 @@
+@use './palette' as p;
+
+$footer-background-color: p.$ccap-palette-color-gray-900;
+$footer-foreground-color: p.$ccap-palette-color-gray-500;

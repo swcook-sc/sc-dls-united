@@ -1,0 +1,309 @@
+// @use "sass:math";
+
+$tablet: 768px;
+
+$baseline-px: 4px;
+
+$paragraph-spacing-ratio: 1.25;
+
+@mixin typographicSpacing($font-size-px, $line-height-px: $font-size-px, $padding-bottom-px: 0px, $padding-top-minimum-px: 0px) {
+
+	$padding-top-units: ceil(($padding-bottom-px + $padding-top-minimum-px) / $baseline-px);
+	// @debug $padding-top-units;
+
+	$padding-top-px: ($padding-top-units * $baseline-px) - $padding-bottom-px;
+	// @debug $padding-top-px;
+
+	margin: 0;
+	font-size: $font-size-px;
+	line-height: $line-height-px;
+	padding-top: $padding-top-px;
+	padding-bottom: $padding-bottom-px;
+}
+
+@mixin header60() {
+	@include typographicSpacing(42px, 52px);
+
+	@media (min-width: $tablet) {
+		@include typographicSpacing(42px, 52px);
+	}
+}
+
+@mixin header54() {
+	@include typographicSpacing(36px, 44px);
+
+	@media (min-width: $tablet) {
+		@include typographicSpacing(54px, 64px);
+	}
+}
+
+@mixin header48() {
+	@include typographicSpacing(32px, 36px);
+
+	@media (min-width: $tablet) {
+		@include typographicSpacing(48px, 60px);
+	}
+}
+
+@mixin header42() {
+	@include typographicSpacing(32px, 36px, 12px);
+
+	@media (min-width: $tablet) {
+		@include typographicSpacing(42px, 52px, 12px);
+	}
+}
+
+@mixin header36() {
+	@include typographicSpacing(32px, 36px, 12px, 1px);
+
+	@media (min-width: $tablet) {
+		@include typographicSpacing(36px, 44px, 12px, 1px);
+	}
+}
+
+@mixin header32() {
+	@include typographicSpacing(28px, 32px, 12px, 1px);
+
+	@media (min-width: $tablet) {
+		@include typographicSpacing(32px, 36px, 12px, 1px);
+	}
+}
+
+@mixin header28() {
+	@include typographicSpacing(24px, 32px, 12px, 1px);
+
+	@media (min-width: $tablet) {
+		@include typographicSpacing(28px, 32px, 12px, 1px);
+	}
+}
+
+@mixin header24() {
+	@include typographicSpacing(20px, 24px, 12px, 1px);
+
+	@media (min-width: $tablet) {
+		@include typographicSpacing(24px, 32px, 12px, 1px);
+	}
+}
+
+@mixin header20() {
+	@include typographicSpacing(18px, 24px, 12px, 1px);
+
+	@media (min-width: $tablet) {
+		@include typographicSpacing(20px, 24px, 12px, 1px);
+	}
+}
+
+
+@mixin paragraphSpacing($font-size-px, $line-height-px) {
+	@include typographicSpacing($font-size-px, $line-height-px, ceil($font-size-px * 1.25));
+}
+
+
+@mixin paragraph18() {
+	@include paragraphSpacing(16px, 24px);
+
+	@media (min-width: $tablet) {
+		@include paragraphSpacing(18px, 24px);
+	}
+}
+
+@mixin paragraph16() {
+	// TODO FIXME 14px font wants 20px of line-height and DSM prescribes 18px
+	// 18px is also not on 4px baseline
+	@include paragraphSpacing(14px, 20px);
+
+	@media (min-width: $tablet) {
+		@include paragraphSpacing(16px, 24px);
+	}
+}
+
+@mixin paragraph14() {
+	@include paragraphSpacing(14px, 20px);
+}
+
+@mixin paragraph12() {
+	@include paragraphSpacing(12px, 16px);
+
+	// @media (min-width: $tablet) {
+	// 	@include paragraphSpacing(12px, 16px);
+	// }
+}
+
+@mixin text-emphasis-variant($color, $hover) {
+	color: $color;
+
+	&:hover,
+	&:focus {
+		color: $hover;
+	}
+}
+
+
+@mixin tab-focus() {
+	// Default
+	outline: thin dotted;
+	// WebKit
+	outline: 5px auto -webkit-focus-ring-color;
+	outline-offset: -2px;
+}
+
+@mixin list-unstyled {
+	padding-left: 0;
+	list-style: none;
+}
+
+
+@mixin descriptor-text() {
+	font-family: 'SantanderMicro';
+
+	display: inline-block;
+
+	color: $primary-color;
+	border-bottom: 1px solid $primary-color;
+	// text-decoration: underline;
+
+	@include paragraph12();
+
+	// this is an over-ride to bring the border to baseline
+	padding-bottom: 3px;
+	// make up the subtracted value from padding as margin to keep subsequent elements on baseline
+	margin-bottom: 6px;
+}
+
+@mixin text-overflow() {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+@mixin clearfix() {
+
+	&:before,
+	&:after {
+		content: " "; // 1
+		display: table; // 2
+	}
+
+	&:after {
+		clear: both;
+	}
+}
+
+
+@mixin clip($c1) {
+	-webkit-line-clamp: $c1;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+@mixin superClips($c1, $c2: $c1, $c3: $c2) {
+	-webkit-line-clamp: $c1;
+
+	@include media-breakpoint-up(lg) {
+		-webkit-line-clamp: $c2;
+	}
+
+	@include media-breakpoint-up(xl) {
+		-webkit-line-clamp: $c3;
+	}
+
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+@mixin clip($c1) {
+	-webkit-line-clamp: $c1;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+@mixin typographicSpacingX($font-size, $padding-bottom, $line-height-units: 6, $overall-height-units: ($line-height-units + 1)){
+	margin: 0;
+	font-size: $font-size;
+
+	$line-height: $baseline * $line-height-units;
+	line-height: $line-height;
+
+	$padding-top: (($overall-height-units - $line-height-units ) * $baseline ) - $padding-bottom;
+
+	padding-top: $padding-top;
+	padding-bottom: $padding-bottom;
+
+}
+
+@mixin legal-text(){
+	font-family: $font-family-micro;
+
+	@include typographicSpacingX(12px, 11px, 5, 10);
+}
+
+@mixin build-typography($font-family-headline, $font-family-primary, $font-weight, $text-color) {
+    h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+	font-family: $font-family-headline;
+	font-weight: 400;
+	font-style: normal;
+	letter-spacing: 0;
+	color: $text-color;
+	}
+
+h1 {
+	@include header42();
+}
+
+h2 {
+	@include header36();
+}
+
+h3 {
+	@include header32();
+}
+
+h4 {
+	@include header28();
+}
+
+h5 {
+	@include header24();
+}
+
+h6 {
+	@include header20();
+}
+
+p {
+	font-family: $font-family-primary;
+	
+	@include paragraph16();
+
+	&.legal,
+	&.legal-text,
+	&.disclaimer,
+	&.disclosure {
+		@include paragraph12();
+	}
+
+	&.lead,
+	&.lede,
+	&.leed,
+	&.subtitle,
+	&.subheading {
+		@include paragraph18();
+	}
+
+	&.subtitle,
+	&.subheading {
+		font-weight: $font-weight;
+	}
+}
+}
