@@ -3,20 +3,12 @@
 @use './skins/ccap/abstracts/' as ccap;
 
 
-
-
-
-
-
 html {
    // color-scheme: light dark;
-    font-size: 10px;
+    font-size: 16px;
 }
 
 body {
     margin: 0;
 }
 
-.no-display {
-    display: none;
-}

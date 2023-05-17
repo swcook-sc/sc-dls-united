@@ -1,4 +1,4 @@
-@mixin build-fonts($primary, $secondary, $headline, $highlight) {
+@mixin build-fonts($primary, $secondary, $headline, $highlight, $regular, $bold, $light) {
 
         .primary-font {
             font-family: nth($primary, 1) ; //first element is the family name
@@ -16,6 +16,22 @@
     .highlighted-text {
         color: $highlight;
     }	
+
+    .bold {
+        font-weight: $bold;
+    }
+
+    .light {
+        font-weight: $light;
+    }
+
+    .regular {
+        font-weight: $regular;
+    }
+
+    .italic {
+        font-style: italic;
+    }
 }
 
 @mixin font-face($family, $file, $path, $weight: normal, $style: normal) {

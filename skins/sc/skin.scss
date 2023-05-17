@@ -13,12 +13,14 @@ $someValue: "Santander Consumer USA";
 .sc-theme {
     font-family: a.$font-secondary-family;
     font-size: 1.75rem;
-    background-color: rgba(a.$sc-palette-color-boston, 0.12);
 
     @include font-mix.build-fonts(a.$font-primary,
         a.$font-secondary,
         a.$font-headline,
-        a.$text-highlight-color );
+        a.$text-highlight-color,
+        a.$font-weight-regular,
+        a.$font-weight-bold,
+        a.$font-weight-light );
 
     @include font-mix.declare-fonts(a.$font-icon...);
 
@@ -54,8 +56,8 @@ $someValue: "Santander Consumer USA";
     @include but-mix.build-buttons(".button-round",
         a.$font-icon-family,
         a.$button-font-size,
-        a.$button-round-padding,
-        a.$button-round-padding,
+        a.$button-round-height,
+        a.$button-round-width,
         a.$button-small-border-radius,
         a.$button-shadow,
         a.$button-round-padding,
@@ -88,9 +90,10 @@ $someValue: "Santander Consumer USA";
     input[type="week"],
     input[type="password"] {
         font-family: a.$font-secondary-family;
-        font-size: 2rem;
+        font-size: 1.25rem;
         color: a.$text-primary-color;
         width: 50rem;
+        height: 2.625rem;
         padding: 12px 20px;
         margin: 8px 0;
         display: inline-block;
@@ -132,15 +135,15 @@ $someValue: "Santander Consumer USA";
         label {
             &::before {
                 position: relative;
-                top: 0.75rem;
+                top: 0.25rem;
                 left: 0px;
                 font-size: 1.5em;
                 margin-right: 1rem;
 
                 border: 1px solid $input-border-color-active;
                 border-radius: 4px;
-                width: 1.75rem;
-                height: 1.75rem;
+                width: 1.25rem;
+                height: 1.25rem;
 
                 content: "checkmark";
 
@@ -176,8 +179,8 @@ $someValue: "Santander Consumer USA";
                 position: relative;
                 top: 5px;
                 content: '';
-                height: 2rem;
-                width: 2rem;
+                height: 1.25rem;
+                width: 1.25rem;
                 border-radius: 50%;
 
                 border: 5px solid white;
@@ -194,6 +197,8 @@ $someValue: "Santander Consumer USA";
     }
 
     .item {
+        padding: 0.5rem;
+        font-weight: a.$font-weight-bold;
         background-color: a.$sc-palette-color-boston;
         color: white;
 

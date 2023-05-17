@@ -30,10 +30,12 @@ $button-secondary-color-background-normal, $button-secondary-color-background-fo
 
 
 $button-border-radius: 0.75rem;
-$button-font-size: 1.325rem;
-$button-height: 2.62rem;
-$button-padding-side: 3rem;
-$button-padding-x: 1.6rem;
+
+$button-font-size: 1.125rem;
+$button-height: 2.625rem;
+$button-min-width: 12.5rem;
+$button-padding-x: 0.625rem;
+$button-padding-side: 2.25rem;
 $button-shadow: 0px 3px 4px rgba(black, 0.12);
 $button-min-width: 12.5rem;
 
@@ -53,6 +55,8 @@ $button-small-min-width: 6rem;
 $button-small-border-radius: .75rem;
 
 // round button
-$button-round-corners: .75rem;
-$button-round-padding: 2rem;
-$button-round-padding-side: 1.2rem;
+$button-round-height: 2.25rem;
+$button-round-width: 2.25rem;
+$button-round-border-radius: .75rem;
+$button-round-padding: 0.625rem;
+$button-round-padding-side: 0.625rem;

@@ -32,13 +32,13 @@ $button-secondary-color-foreground-normal, $button-secondary-color-foreground-fo
 $button-secondary-color-background-normal, $button-secondary-color-background-focus, $button-secondary-color-background-active, $button-secondary-color-background-disabled;
 
 
-$button-border-radius: 2rem;
+$button-border-radius: 1.5rem;
 
-$button-font-size: 1.8rem;
-$button-height: 4.2rem;
+$button-font-size: 1.125rem;
+$button-height: 2.625rem;
 $button-min-width: 12.5rem;
-$button-padding-side: 3.6rem;
-$button-padding-x: 1.4rem;
+$button-padding-x: 0.625rem;
+$button-padding-side: 2.25rem;
 $button-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
 
 // secondary button
@@ -58,6 +58,8 @@ $button-small-padding: 1.6rem;;
 $button-small-border-radius: 2rem;
 
 // round button
-$button-round-border-radius: 3rem;
-$button-round-padding: 2rem;
-$button-round-padding-side: 1.2rem;
+$button-round-height: 2.25rem;
+$button-round-width: 2.25rem;
+$button-round-border-radius: 3.25rem;
+$button-round-padding: 0.625rem;
+$button-round-padding-side: 0.625rem;
