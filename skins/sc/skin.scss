@@ -12,8 +12,33 @@ $someValue: "Santander Consumer USA";
 @include font-mix.declare-fonts(a.$font-headline...);
 
 .sc-theme {
-    font-family: a.$font-secondary-family;
-    font-size: 1.75rem;
+    font-family: a.$font-primary-family;
+    font-size: 1.5rem;
+    color: a.$text-primary-color;
+
+    .highlight-text {
+        color: a.$text-highlight-color;
+    }
+
+    .icon {
+        font-family: a.$font-icon-family;
+    }
+
+    .center-content {
+        display: flex;
+        justify-content:  center;
+    }
+    
+    .right-content {
+        display: flex;
+        justify-content:  right;   
+    }
+
+    .left-content {
+        display: flex;
+        justify-content:  left;   
+
+    }
 
     @include head-mix.build-header(3rem, 3rem, a.$font-secondary-family, 1.5rem, 1.5rem, a.$font-icon-family, a.$sc-palette-color-boston, a.$sc-palette-color-white);
 
@@ -95,16 +120,15 @@ $someValue: "Santander Consumer USA";
         font-family: a.$font-secondary-family;
         font-size: 1.25rem;
         color: a.$text-primary-color;
-        width: 50rem;
+        width: 100%;
         height: 2.625rem;
         padding: 12px 20px;
-        margin: 8px 0;
+        margin: 0.25rem 0rem;
         display: inline-block;
         border: 1px solid $input-border-color;
         border-radius: $input-border-radius;
         box-sizing: border-box;
         transition: all 0.3s;
-
 
         &:focus {
             outline: 1px solid $input-border-color-active;
@@ -145,8 +169,8 @@ $someValue: "Santander Consumer USA";
 
                 border: 1px solid $input-border-color-active;
                 border-radius: 4px;
-                width: 1.25rem;
-                height: 1.25rem;
+                width: 1rem;
+                height: 1rem;
 
                 content: "checkmark";
 
