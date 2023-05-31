@@ -79,7 +79,7 @@ $someValue: "Santander Consumer USA";
     $input-border-color: a.$sc-palette-color-neutral-70;
     $input-border-color-active: a.$sc-palette-color-dark-turquoise;
     $input-border-color-disabled: a.$sc-palette-color-neutral-50;
-    $input-accent-color: a.$sc-palette-color-boston;
+    $input-accent-color: a.$sc-palette-color-midnight-sky;
     $input-border-radius: 8px;
     $input-icon-font-family: a.$font-icon-family;
     $input-checkbox-character: 'checkmark';
@@ -112,7 +112,6 @@ $someValue: "Santander Consumer USA";
 
         &:hover {
             outline: 1px solid $input-border-color-active;
-
         }
     }
 
@@ -126,7 +125,8 @@ $someValue: "Santander Consumer USA";
 
         input[type="checkbox"]:checked+label {
             &::before {
-                color: $input-accent-color;
+                background-color: $input-accent-color;
+                color: white;
                 border: 1px solid $input-accent-color;
             }
         }
@@ -196,7 +196,7 @@ $someValue: "Santander Consumer USA";
     }
 
     progress {
-        accent-color: $input-accent-color;
+        accent-color: a.$sc-palette-color-boston;
     }
 
     .item {

@@ -6,12 +6,12 @@ $button-font-family: f.$font-secondary-family;
 $button-primary-color-background-normal:  p.$sc-palette-color-santander;
 $button-primary-color-background-focus: p.$sc-palette-color-boston;
 $button-primary-color-background-active: p.$sc-palette-color-ruby;
-$button-primary-color-background-disabled: p.$sc-palette-color-light-grey;
+$button-primary-color-background-disabled: p.$sc-palette-color-lighter-grey;
 
 $button-primary-color-foreground-normal: p.$sc-palette-color-white;
 $button-primary-color-foreground-focus: p.$sc-palette-color-white;
 $button-primary-color-foreground-active: p.$sc-palette-color-white;
-$button-primary-color-foreground-disabled: p.$sc-palette-color-white;
+$button-primary-color-foreground-disabled: p.$sc-palette-color-light-grey;
 
 
 
@@ -23,7 +23,7 @@ $button-secondary-color-foreground-disabled: p.$sc-palette-color-light-grey;
 $button-secondary-color-background-normal: p.$sc-palette-color-white;
 $button-secondary-color-background-focus: p.$sc-palette-color-white;
 $button-secondary-color-background-active: p.$sc-palette-color-white;
-$button-secondary-color-background-disabled: p.$sc-palette-color-white;
+$button-secondary-color-background-disabled: p.$sc-palette-color-lighter-grey;
 
 $button-colors: 
 $button-primary-color-foreground-normal, $button-primary-color-foreground-focus, $button-primary-color-foreground-active, $button-primary-color-foreground-disabled,
@@ -34,8 +34,8 @@ $button-secondary-color-background-normal, $button-secondary-color-background-fo
 
 $button-border-radius: 1.5rem;
 
-$button-font-size: 1.125rem;
-$button-height: 2.625rem;
+$button-font-size: 1rem;
+$button-height: 3rem;
 $button-min-width: 12.5rem;
 $button-padding-x: 0.625rem;
 $button-padding-side: 2.25rem;
@@ -52,7 +52,7 @@ $button-mobile-padding-side: 6.5rem;
 // small button
 $button-small-height: 2rem;
 $button-small-border-radius: 2rem;
-$button-small-font-size: 1.8rem;
+$button-small-font-size: 0.75rem;
 $button-small-min-width: 6rem;
 $button-small-padding: 1.6rem;;
 $button-small-border-radius: 2rem;
