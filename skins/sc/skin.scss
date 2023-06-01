@@ -5,6 +5,7 @@
 @use "../../mixins/buttons" as but-mix;
 @use "../../mixins/lists" as list-mix;
 @use "../../mixins/headers" as head-mix;
+@use "../../mixins/inputs" as input-mix;
 
 $someValue: "Santander Consumer USA";
 @include font-mix.declare-fonts(a.$font-primary...);
@@ -73,131 +74,15 @@ $someValue: "Santander Consumer USA";
         "checkmark-in-a-circle"
     );
 
-    $input-background-color: a.$sc-palette-color-white;
-    $input-font-family: a.$font-secondary-family;
-    $input-text-color: a.$text-primary-color;
-    $input-border-color: a.$sc-palette-color-neutral-70;
-    $input-border-color-active: a.$sc-palette-color-dark-turquoise;
-    $input-border-color-disabled: a.$sc-palette-color-neutral-50;
-    $input-accent-color: a.$sc-palette-color-midnight-sky;
-    $input-border-radius: 8px;
-    $input-icon-font-family: a.$font-icon-family;
-    $input-checkbox-character: 'checkmark';
-
-    input[type="text"],
-    input[type="date"],
-    input[type="email"],
-    input[type="month"],
-    input[type="number"],
-    input[type="tel"],
-    input[type="week"],
-    input[type="password"] {
-        font-family: a.$font-secondary-family;
-        font-size: 1.25rem;
-        color: a.$text-primary-color;
-        width: 50rem;
-        height: 2.625rem;
-        padding: 12px 20px;
-        margin: 8px 0;
-        display: inline-block;
-        border: 1px solid $input-border-color;
-        border-radius: $input-border-radius;
-        box-sizing: border-box;
-        transition: all 0.3s;
 
 
-        &:focus {
-            outline: 1px solid $input-border-color-active;
-        }
-
-        &:hover {
-            outline: 1px solid $input-border-color-active;
-        }
-    }
-
-    .check-box {
-        input[type="checkbox"]:hover+label:hover {
-            &::before {
-                border: 1px solid $input-accent-color;
-                transition: all 0.3s;
-            }
-        }
-
-        input[type="checkbox"]:checked+label {
-            &::before {
-                background-color: $input-accent-color;
-                color: white;
-                border: 1px solid $input-accent-color;
-            }
-        }
-
-        input[type="checkbox"] {
-            display: none;
-        }
-
-        label {
-            &::before {
-                position: relative;
-                top: 0.25rem;
-                left: 0px;
-                font-size: 1.5em;
-                margin-right: 1rem;
-
-                border: 1px solid $input-border-color-active;
-                border-radius: 4px;
-                width: 1.25rem;
-                height: 1.25rem;
-
-                content: "checkmark";
-
-                font-family: a.$font-icon-family;
-                color: white;
-            }
-        }
-    }
-
-    .radio-button {
-
-        input[type="radio"] {
-            display: none;
-
-            &:checked + label::before {
-                box-shadow: 0 0 0 1px $input-accent-color;
-
-                background: $input-accent-color;
-            }
-
-            &:hover + label::before {
-                box-shadow: 0 0 0 1px $input-accent-color;
-            }
-
-        }
-
-        label {
-            cursor: pointer;
-            margin-bottom: 0;
-
-            &::before {
-                display: inline-block;
-                position: relative;
-                top: 5px;
-                content: '';
-                height: 1.25rem;
-                width: 1.25rem;
-                border-radius: 50%;
-
-                border: 5px solid white;
-                box-shadow: 0 0 0 1px $input-border-color-active;
-                margin-right: 1.5rem;
-                transition: all 0.3s;
-
-            }
-        }
-    }
-
-    progress {
-        accent-color: a.$sc-palette-color-boston;
-    }
+    @include input-mix.buildInputs(a.$font-secondary-family, 
+        a.$text-primary-color, 
+        a.$sc-palette-color-midnight-sky,
+        a.$sc-palette-color-neutral-70,
+        a.$sc-palette-color-dark-turquoise,
+        a.$sc-palette-color-neutral-50,
+        0.5rem);
 
     .item {
         padding: 0.5rem;

@@ -1,0 +1,118 @@
+@mixin buildInputs($font-family, 
+                    $text-color, 
+                    $accent-color, 
+                    $border-color, 
+                    $border-color-active, 
+                    $border-color-disabled,
+                    $border-radius) {
+
+    input[type="text"],
+    input[type="date"],
+    input[type="email"],
+    input[type="month"],
+    input[type="number"],
+    input[type="tel"],
+    input[type="week"],
+    input[type="password"] {
+        font-family: $font-family;
+        font-size: 1.25rem;
+        color: $text-color;
+        height: 2.625rem;
+        padding: 0.75rem 1.25rem;
+        margin: 0.5rem 0;
+        display: inline-block;
+        border: 1px solid $border-color;
+        border-radius: $border-radius;
+        box-sizing: border-box;
+        transition: all 0.3s;
+
+        &:active,
+        &:hover {
+            outline: 1px solid $border-color-active;
+        }
+    }
+
+    .check-box {
+        input[type="checkbox"]:hover+label:hover {
+            &::before {
+                border: 1px solid $accent-color;
+                transition: all 0.3s;
+            }
+        }
+
+        input[type="checkbox"]:checked+label {
+            &::before {
+                background-color: $accent-color;
+                color: white;
+                border: 1px solid $accent-color;
+            }
+        }
+
+        input[type="checkbox"] {
+            display: none;
+        }
+
+        label {
+            &::before {
+                position: relative;
+                top: 0.25rem;
+                left: 0px;
+                font-size: 1.5em;
+                margin-right: 1rem;
+
+                border: 1px solid $border-color-active;
+                border-radius: 4px;
+                width: 1.25rem;
+                height: 1.25rem;
+
+                content: "checkmark";   //TODO: This needs to be a parameter someday
+                font-family: 'Santander Icons'; //TODO: This must be changed!!!
+                color: white;
+            }
+        }
+    }
+
+    .radio-button {
+
+        input[type="radio"] {
+            display: none;
+
+            &:checked + label::before {
+                box-shadow: 0 0 0 1px $accent-color;
+
+                background: $accent-color;
+            }
+
+            &:hover + label::before {
+                box-shadow: 0 0 0 1px $accent-color;
+            }
+
+        }
+
+        label {
+            cursor: pointer;
+            margin-bottom: 0;
+
+            &::before {
+                display: inline-block;
+                position: relative;
+                top: 5px;
+                content: '';
+                height: 1.25rem;
+                width: 1.25rem;
+                border-radius: 50%;
+
+                border: 5px solid white;
+                box-shadow: 0 0 0 1px $border-color-active;
+                margin-right: 1.5rem;
+                transition: all 0.3s;
+
+            }
+        }
+    }
+
+    progress {
+        accent-color: $accent-color;
+    }
+
+}
