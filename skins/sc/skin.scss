@@ -21,27 +21,15 @@ $someValue: "Santander Consumer USA";
         color: a.$text-highlight-color;
     }
 
+    .accent-text {
+        color: a.$sc-palette-color-dark-turquoise;
+    }
+
     .icon {
         font-family: a.$font-icon-family;
     }
 
-    .center-content {
-        display: flex;
-        justify-content:  center;
-    }
-    
-    .right-content {
-        display: flex;
-        justify-content:  right;   
-    }
-
-    .left-content {
-        display: flex;
-        justify-content:  left;   
-
-    }
-
-    @include head-mix.build-header(3rem, 3rem, a.$font-secondary-family, 1.5rem, 1.5rem, a.$font-icon-family, a.$sc-palette-color-white, a.$sc-palette-color-santander);
+    @include head-mix.build-header(3rem, 3rem, a.$font-secondary-family, 1.5rem, 1.5rem, a.$font-icon-family, a.$sc-palette-color-white, a.$sc-palette-color-santander, 'santander');
 
     @include font-mix.build-fonts(a.$font-primary,
         a.$font-secondary,
@@ -118,5 +106,9 @@ $someValue: "Santander Consumer USA";
         &::before {
             content: $someValue;
         }
+    }
+
+    progress {
+        accent-color: a.$sc-palette-color-boston; //TODO: Fix this rich!
     }
 }
