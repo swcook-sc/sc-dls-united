@@ -12,3 +12,33 @@ body {
     margin: 0;
 }
 
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.center-content {
+    display: flex;
+    justify-content:  center;
+}
+
+.center {
+    text-align: center;
+}
+
+.right-content {
+    display: flex;
+    justify-content:  right;   
+}
+
+.left-content {
+    display: flex;
+    justify-content:  left;   
+
+}

@@ -16,7 +16,19 @@
     font-family: a.$font-primary-family;
     font-size: 1.75rem;
 
-    @include head-mix.build-header(3rem, 3rem, a.$font-primary-family, 1.5rem, 1.5rem, a.$font-icon-family, a.$ccap-palette-color-blue, a.$ccap-palette-color-white);
+    font-family: a.$font-primary-family;
+    font-size: 1.5rem;
+    color: a.$text-primary-color;
+
+    .highlight-text {
+        color: a.$text-highlight-color;
+    }
+
+    .icon {
+        font-family: a.$font-icon-family;
+    }
+
+    @include head-mix.build-header(3rem, 3rem, a.$font-primary-family, 1.5rem, 1.5rem, a.$font-icon-family, a.$ccap-palette-color-blue, a.$ccap-palette-color-white, 'soccer');
 
 
     $someValue: 'Chrysler Capital';

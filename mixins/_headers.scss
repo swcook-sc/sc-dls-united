@@ -1,7 +1,8 @@
 
 @mixin build-header(    $height, $height-mobile, 
                         $font-family, $font-size, $font-size-mobile, 
-                        $font-icon-family, $background-color, $foreground-color) {
+                        $font-icon-family, $background-color, $foreground-color,
+                        $logo) {
     .header {
         display: grid;
         grid-template-columns: 3rem auto 3rem;
@@ -15,6 +16,7 @@
     
         background-color: $background-color;
         color: $foreground-color;
+        border-bottom: 1px solid gray; // TODO: change to variable
     
         &__balance {
             grid-area: balance;
@@ -31,7 +33,7 @@
     
     
             &::before {
-                content: 'santander';
+                content: $logo;
                 font-family: $font-icon-family;
                 font-size: auto;
                 padding-right: 10px;
