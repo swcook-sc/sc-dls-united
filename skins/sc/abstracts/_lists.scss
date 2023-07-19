@@ -1,5 +1,5 @@
 @use './fonts' as f;
-@use './typography' as t;
+@use './text' as t;
 
 $checklist-font-family: f.$font-secondary-family;
 $checklist-icon: 'checkmark-in-a-circle';

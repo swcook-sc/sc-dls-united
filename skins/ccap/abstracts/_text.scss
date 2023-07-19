@@ -1,0 +1,13 @@
+@use './palette' as p;
+
+$text-color-default: p.$ccap-palette-color-black;
+$text-color-soft: p.$ccap-palette-color-gray-500;
+$text-color-disabled: p.$ccap-palette-color-gray-200;
+$text-color-inverted: p.$ccap-palette-color-white;
+$text-color-brand: p.$ccap-palette-color-red-400;
+$text-color-info: p.$ccap-palette-color-indigo-400;
+$text-color-success: p.$ccap-palette-color-green-400;
+$text-color-warning: p.$ccap-palette-color-yellow-400;
+$text-color-error: p.$ccap-palette-color-red-600;
+
+$text-color-accent: p.$ccap-palette-color-cyan-700;
