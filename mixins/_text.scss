@@ -1,0 +1,42 @@
+@mixin build-text-styles($default, $soft, $disabled, $inverted, $brand, $accent, $info, $success, $warning, $error) {
+
+    .text-color-default {
+        color: $default;
+    }
+
+    .text-color-soft {
+        color: $soft;
+    }
+
+    .text-color-disabled {
+        color: $disabled;
+    }
+
+    .text-color-inverted {
+        color: $inverted;
+    }
+
+    .text-color-brand {
+        color: $brand;
+    }
+
+    .text-color-accent {
+        color: $accent;
+    }
+
+    .text-color-info {
+        color: $info;
+    }
+
+    .text-color-success {
+        color: $success;
+    }
+
+    .text-color-warning {
+        color: $warning;
+    }
+
+    .text-color-error {
+        color: $error;
+    }
+}

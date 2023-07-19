@@ -1,4 +1,13 @@
 @use './palette' as p;
 
-$text-primary-color: p.$sc-palette-color-medium-grey;
-$text-highlight-color: p.$sc-palette-color-boston;
+$text-color-default: p.$sc-palette-color-neutral-95;
+$text-color-soft: p.$sc-palette-color-neutral-55;
+$text-color-disabled: p.$sc-palette-color-opacity-23-neutral-95;
+$text-color-inverted: p.$sc-palette-color-neutral-00;
+$text-color-brand: p.$sc-palette-color-red-40;
+$text-color-info: p.$sc-palette-color-sky-75;
+$text-color-success: p.$sc-palette-color-green-75;
+$text-color-warning: p.$sc-palette-color-yellow-80;
+$text-color-error: p.$sc-palette-color-red-65;
+
+$text-color-accent: p.$sc-palette-color-turquoise-75;

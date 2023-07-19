@@ -1,0 +1,43 @@
+@mixin build-borders($default, $soft, $hover, $disabled, $alternate, $inverted, $info, $success, $warning, $error) {
+
+    .border-color-default {
+        border-color: $default;
+    }
+
+    .border-color-soft {
+        border-color: $soft;
+    }
+
+    .border-color-hover {
+        border-color: $hover;
+    }
+
+    .border-color-disabled {
+        border-color: $disabled;
+    }
+
+    .border-color-alternate {
+        border-color: $alternate;
+    }
+
+    .border-color-inverted {
+        border-color: $inverted;
+    }
+
+    .border-color-info {
+        border-color: $info;
+    }
+
+    .border-color-success {
+        border-color: $success;
+    }
+
+    .border-color-warning {
+        border-color: $warning;
+    }
+
+    .border-color-error {
+        border-color: $error;
+    }
+}
+
