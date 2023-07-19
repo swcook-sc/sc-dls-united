@@ -15,8 +15,10 @@ $someValue: "Santander Consumer USA";
 .sc-theme {
     font-family: a.$font-primary-family;
     font-size: 1.5rem;
-    color: a.$text-primary-color;
 
+    .normal-text {
+        color: a.$text-primary-color;
+    }
 
     .highlight-text {
         color: a.$text-highlight-color;
@@ -99,6 +101,10 @@ $someValue: "Santander Consumer USA";
         a.$sc-palette-color-neutral-50,
         0.5rem);
 
+    input::placeholder {
+        color: a.$sc-palette-color-neutral-70;
+    }
+    
     .item {
         padding: 0.5rem;
         font-weight: a.$font-weight-bold;
