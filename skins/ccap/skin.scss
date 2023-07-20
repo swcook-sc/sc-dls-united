@@ -6,7 +6,9 @@
 @use '../../mixins/lists' as list-mix;
 @use "../../mixins/inputs" as input-mix;
 @use "../../mixins/headers" as head-mix;
-
+@use "../../mixins/text" as text-mix;
+@use "../../mixins/backgrounds" as background-mix;
+@use "../../mixins/borders" as border-mix;
 
 @include font-mix.declare-fonts(a.$font-primary...);
 @include font-mix.declare-fonts(a.$font-secondary...);
@@ -18,36 +20,64 @@
 
     font-family: a.$font-primary-family;
     font-size: 1.5rem;
-    color: a.$text-primary-color;
+    color: a.$text-color-default;
 
-    .highlight-text {
-        color: a.$text-highlight-color;
-    }
 
-    .icon {
-        font-family: a.$font-icon-family;
-    }
+    @include text-mix.build-text-styles(a.$text-color-default,
+        a.$text-color-soft,
+        a.$text-color-disabled,
+        a.$text-color-inverted,
+        a.$text-color-brand,
+        a.$text-color-accent,
+        a.$text-color-info,
+        a.$text-color-success,
+        a.$text-color-warning,
+        a.$text-color-error );
+    
+    @include background-mix.build-backgrounds(a.$background-color-default,
+        a.$background-color-alternate,
+        a.$background-color-soft,
+        a.$background-color-strong,
+        a.$background-color-inverted,
+        a.$background-color-brand,
+        a.$background-color-overlay,
+        a.$background-color-info,
+        a.$background-color-success,
+        a.$background-color-warning,
+        a.$background-color-error );
+
+    @include border-mix.build-borders(
+        a.$border-color-default,
+        a.$border-color-soft,
+        a.$border-color-hover,
+        a.$border-color-disabled,
+        a.$border-color-alternate,
+        a.$border-color-inverted,
+        a.$border-color-info,
+        a.$border-color-success,
+        a.$border-color-warning,
+        a.$border-color-error);
 
     @include head-mix.build-header(3rem, 3rem, a.$font-primary-family, 1.5rem, 1.5rem, a.$font-icon-family, a.$ccap-palette-color-blue, a.$ccap-palette-color-white, 'soccer');
 
 
     $someValue: 'Chrysler Capital';
 
-    @include font-mix.build-fonts(a.$font-primary, a.$font-secondary, a.$font-headline, a.$text-highlight-color, a.$font-weight-regular,
+    @include font-mix.build-fonts(a.$font-primary, a.$font-secondary, a.$font-headline, a.$text-color-brand, a.$font-weight-regular,
     a.$font-weight-bold,
     a.$font-weight-light);
 
     @include font-mix.declare-fonts(a.$font-icon...);
-    @include type-mix.build-typography(a.$font-headline-family, a.$font-primary-family, a.$font-weight-bold, a.$text-primary-color);
+    @include type-mix.build-typography(a.$font-headline-family, a.$font-primary-family, a.$font-weight-bold, a.$text-color-default);
 
     @include link-mix.build-links(a.$links-colors...);
     @include but-mix.build-buttons(".button",       a.$font-secondary-family,a.$button-font-size, a.$button-height, a.$button-min-width, a.$button-border-radius, a.$button-shadow, a.$button-padding-x, a.$button-padding-side,  a.$button-colors...);
     @include but-mix.build-buttons(".button-small", a.$font-secondary-family, a.$button-font-size, a.$button-small-height, a.$button-small-min-width, a.$button-small-border-radius, a.$button-shadow, a.$button-padding-x, a.$button-padding-side, a.$button-colors...);
     @include but-mix.build-buttons(".button-round", a.$font-icon-family, a.$button-font-size, a.$button-round-height, a.$button-round-width, a.$button-round-border-radius, a.$button-shadow, a.$button-round-padding, a.$button-round-padding-side, a.$button-colors...);
-    @include list-mix.build-lists(a.$font-secondary-family, a.$font-icon-family, a.$text-highlight-color, 'send');
+    @include list-mix.build-lists(a.$font-secondary-family, a.$font-icon-family, a.$text-color-brand, 'send');
 
     @include input-mix.buildInputs(a.$font-secondary-family, 
-        a.$text-primary-color, 
+        a.$text-color-default, 
         a.$ccap-palette-color-primary,
         a.$ccap-palette-color-blue,
         a.$ccap-palette-color-blue-active,

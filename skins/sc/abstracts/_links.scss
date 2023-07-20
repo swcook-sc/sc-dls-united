@@ -1,16 +1,16 @@
 @use './palette' as p;
 
-$link-secondary-color: p.$sc-palette-color-boston;
-$link-secondary-color-hover: p.$sc-palette-color-boston;
-$link-secondary-color-pressed: p.$sc-palette-color-ruby;
-$link-secondary-color-visited: p.$sc-palette-color-boston;
-$link-secondary-color-disabled: rgba(p.$sc-palette-color-darker-grey, .23);
+$link-secondary-color: p.$sc-palette-color-red-50;
+$link-secondary-color-hover: p.$sc-palette-color-red-50;
+$link-secondary-color-pressed: p.$sc-palette-color-red-65;
+$link-secondary-color-visited: p.$sc-palette-color-red-50;
+$link-secondary-color-disabled: p.$sc-palette-color-opacity-23-neutral-95;
 
-$link-primary-color: p.$sc-palette-color-dark-turquoise;
-$link-primary-color-hover: p.$sc-palette-color-dark-turquoise;
-$link-primary-color-pressed: p.$sc-palette-color-darker-turquoise;
-$link-primary-color-visited: p.$sc-palette-color-dark-turquoise;
-$link-primary-color-disabled: rgba(p.$sc-palette-color-darker-grey, .23);
+$link-primary-color: p.$sc-palette-color-turquoise-75;
+$link-primary-color-hover: p.$sc-palette-color-turquoise-75;
+$link-primary-color-pressed: p.$sc-palette-color-turquoise-85;
+$link-primary-color-visited: p.$sc-palette-color-turquoise-75;
+$link-primary-color-disabled: p.$sc-palette-color-opacity-23-neutral-95;
 
 $links-colors: 
 $link-primary-color, $link-primary-color-hover, $link-primary-color-pressed, $link-primary-color-visited, $link-primary-color-disabled,

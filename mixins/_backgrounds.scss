@@ -1,0 +1,45 @@
+@mixin build-backgrounds($default, $alternate, $soft, $strong, $inverted, $brand, $overlay, $info, $success, $warning, $error) {
+    .background-color-default {
+        background-color: $default;
+    }
+
+    .background-color-alternate {
+        background-color: $alternate;
+    }
+
+    .background-color-soft {
+        background-color: $soft;
+    }
+
+    .background-color-strong {
+        background-color: $strong;
+    }
+
+    .background-color-inverted {
+        background-color: $inverted;
+    }
+
+    .background-color-brand {
+        background-color: $brand;
+    }
+
+    .background-color-overlay {
+        background-color: $overlay;
+    }
+
+    .background-color-info {
+        background-color: $info;
+    }
+
+    .background-color-success {
+        background-color: $success;
+    }
+
+    .background-color-warning {
+        background-color: $warning;
+    }
+
+    .background-color-error {
+        background-color: $error;
+    }
+}

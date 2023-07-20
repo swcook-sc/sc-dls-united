@@ -3,27 +3,26 @@
 
 $button-font-family: f.$font-secondary-family;
 
-$button-primary-color-background-normal:  p.$sc-palette-color-santander;
-$button-primary-color-background-focus: p.$sc-palette-color-boston;
-$button-primary-color-background-active: p.$sc-palette-color-ruby;
-$button-primary-color-background-disabled: p.$sc-palette-color-lighter-grey;
+$button-primary-color-background-normal:  p.$sc-palette-color-red-40;
+$button-primary-color-background-focus: p.$sc-palette-color-red-50;
+$button-primary-color-background-active: p.$sc-palette-color-red-65;
+$button-primary-color-background-disabled: p.$sc-palette-color-opacity-06-neutral-95;
 
-$button-primary-color-foreground-normal: p.$sc-palette-color-white;
-$button-primary-color-foreground-focus: p.$sc-palette-color-white;
-$button-primary-color-foreground-active: p.$sc-palette-color-white;
-$button-primary-color-foreground-disabled: p.$sc-palette-color-light-grey;
+$button-primary-color-foreground-normal: p.$sc-palette-color-neutral-00;
+$button-primary-color-foreground-focus: p.$sc-palette-color-neutral-00;
+$button-primary-color-foreground-active: p.$sc-palette-color-neutral-00;
+$button-primary-color-foreground-disabled: p.$sc-palette-color-opacity-23-neutral-95;
 
 
+$button-secondary-color-foreground-normal:  p.$sc-palette-color-red-40;
+$button-secondary-color-foreground-focus: p.$sc-palette-color-red-50;
+$button-secondary-color-foreground-active: p.$sc-palette-color-red-65;
+$button-secondary-color-foreground-disabled: p.$sc-palette-color-opacity-23-neutral-95;
 
-$button-secondary-color-foreground-normal:  p.$sc-palette-color-santander;
-$button-secondary-color-foreground-focus: p.$sc-palette-color-boston;
-$button-secondary-color-foreground-active: p.$sc-palette-color-ruby;
-$button-secondary-color-foreground-disabled: p.$sc-palette-color-light-grey;
-
-$button-secondary-color-background-normal: p.$sc-palette-color-white;
-$button-secondary-color-background-focus: p.$sc-palette-color-white;
-$button-secondary-color-background-active: p.$sc-palette-color-white;
-$button-secondary-color-background-disabled: p.$sc-palette-color-lighter-grey;
+$button-secondary-color-background-normal: p.$sc-palette-color-neutral-00;
+$button-secondary-color-background-focus: p.$sc-palette-color-neutral-00;
+$button-secondary-color-background-active: p.$sc-palette-color-neutral-00;
+$button-secondary-color-background-disabled: p.$sc-palette-color-opacity-23-neutral-95;
 
 $button-colors: 
 $button-primary-color-foreground-normal, $button-primary-color-foreground-focus, $button-primary-color-foreground-active, $button-primary-color-foreground-disabled,
