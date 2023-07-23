@@ -1,3 +1,4 @@
+@import './breakpoints';
 
 @mixin build-header(    $height, $height-mobile, 
                         $font-family, $font-size, $font-size-mobile, 
@@ -5,14 +6,26 @@
                         $logo) {
     .header {
         display: grid;
+
+        grid-template-columns:  auto 3rem;
+        grid-template-areas:
+            " branding hamburger";
+
+        @include respond-to($bpTablet) {
         grid-template-columns: 3rem auto 3rem;
         grid-template-areas:
             "balance branding hamburger";
+        }
     
         height: $height-mobile;
         width: 100%;
         font-family: $font-family;
         font-size: $font-size-mobile;
+
+        @include respond-to($bpSmallDesktop) {
+            height: $height;
+            font-size: $font-size;
+        }
     
         background-color: $background-color;
         color: $foreground-color;
@@ -47,7 +60,7 @@
         &__hamburger {
             grid-area: hamburger;
             font-family: $font-icon-family;
-            font-size: $height;
+            font-size: $height-mobile;
         
             &--item {
                 display: flex;
@@ -57,7 +70,12 @@
     
                 position: relative;
                 top: 0px;
-                right: .5rem;
+                right: -1.5rem;
+
+                @include respond-to($bpTablet) {
+                    right: 0.5rem;
+                    height: $height;
+                }
             }
         }
     }
