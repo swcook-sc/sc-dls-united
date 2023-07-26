@@ -1,0 +1,18 @@
+@use './palette' as p;
+
+$link-secondary-color: p.$sc-palette-color-red-30;
+$link-secondary-color-hover: p.$sc-palette-color-red-25;
+$link-secondary-color-pressed: p.$sc-palette-color-red-30;
+$link-secondary-color-visited: p.$sc-palette-color-red-30;
+$link-secondary-color-disabled: p.$sc-palette-color-opacity-32-neutral-00;
+
+$link-primary-color: p.$sc-palette-color-turquoise-35;
+$link-primary-color-hover: p.$sc-palette-color-turquoise-20;
+$link-primary-color-pressed: p.$sc-palette-color-turquoise-35;
+$link-primary-color-visited: p.$sc-palette-color-turquoise-35;
+$link-primary-color-disabled: p.$sc-palette-color-opacity-32-neutral-00;
+
+$links-colors: 
+$link-primary-color, $link-primary-color-hover, $link-primary-color-pressed, $link-primary-color-visited, $link-primary-color-disabled,
+$link-secondary-color, $link-secondary-color-hover, $link-secondary-color-pressed, $link-secondary-color-visited, $link-secondary-color-disabled;
+

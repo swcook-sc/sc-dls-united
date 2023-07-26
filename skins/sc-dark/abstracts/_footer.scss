@@ -1,0 +1,5 @@
+@use './palette' as p;
+
+$footer-background-color: p.$sc-palette-color-neutral-55;
+$footer-foreground-color: p.$sc-palette-color-neutral-25;
+$footer-column-head-color: p.$sc-palette-color-neutral-95;

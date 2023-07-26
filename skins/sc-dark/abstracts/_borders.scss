@@ -1,0 +1,12 @@
+@use './palette' as p;
+
+$border-color-default: p.$sc-palette-color-neutral-40;
+$border-color-soft: p.$sc-palette-color-neutral-70;
+$border-color-hover: p.$sc-palette-color-neutral-30;
+$border-color-disabled: p.$sc-palette-color-neutral-70;
+$border-color-alternate: p.$sc-palette-color-neutral-70;
+$border-color-inverted: p.$sc-palette-color-neutral-95;
+$border-color-info: p.$sc-palette-color-sky-25;
+$border-color-success: p.$sc-palette-color-green-25;
+$border-color-warning: p.$sc-palette-color-yellow-25;
+$border-color-error: p.$sc-palette-color-red-25;
