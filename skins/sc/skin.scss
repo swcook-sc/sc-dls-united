@@ -121,14 +121,14 @@ $someValue: "Santander Consumer USA";
 
     @include input-mix.buildInputs(a.$font-secondary-family, 
         a.$text-color-default, 
-        a.$sc-palette-color-sky-75,
-        a.$sc-palette-color-opacity-10-neutral-95,
         a.$sc-palette-color-turquoise-75,
+        a.$sc-palette-color-neutral-45,
+        a.$sc-palette-color-neutral-95,
         a.$sc-palette-color-opacity-50-neutral-95,
         0.5rem);
 
     input::placeholder {
-        color: a.$sc-palette-color-opacity-50-neutral-95;
+        color: a.$sc-palette-color-neutral-45;
     }
     
     .item {
