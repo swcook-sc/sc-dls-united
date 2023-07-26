@@ -1,11 +1,16 @@
-
 $sc-palette-color-neutral-00: #ffffff; 
 $sc-palette-color-neutral-01: #f6f6f6; 
 $sc-palette-color-neutral-10: #f0f0f0; 
 $sc-palette-color-neutral-25: #cccccc;
+$sc-palette-color-neutral-30: #c7c7c7;
+$sc-palette-color-neutral-40: #a2a2a2; 
 $sc-palette-color-neutral-45: #8f8f8f; 
 $sc-palette-color-neutral-55: #727272; 
+$sc-palette-color-neutral-70: #575757; 
+$sc-palette-color-neutral-75: #4d4d4d; 
+$sc-palette-color-neutral-90: #2e2e2e; 
 $sc-palette-color-neutral-95: #222222; 
+$sc-palette-color-neutral-100: #141414; 
 
 $sc-palette-color-opacity-00-neutral-95: rgba(34, 34, 34, 0.00); 
 $sc-palette-color-opacity-04-neutral-95: rgba(34, 34, 34, 0.04); 
@@ -15,32 +20,56 @@ $sc-palette-color-opacity-20-neutral-95: rgba(34, 34, 34, 0.20);
 $sc-palette-color-opacity-23-neutral-95: rgba(34, 34, 34, 0.23); 
 $sc-palette-color-opacity-50-neutral-95: rgba(34, 34, 34, 0.50); 
 
+$sc-palette-color-opacity-00-neutral-00: rgba(255, 255, 255, 0.00); 
+$sc-palette-color-opacity-04-neutral-00: rgba(255, 255, 255, 0.04); 
+$sc-palette-color-opacity-06-neutral-00: rgba(255, 255, 255, 0.06); 
+$sc-palette-color-opacity-10-neutral-00: rgba(255, 255, 255, 0.10); 
+$sc-palette-color-opacity-12-neutral-00: rgba(255, 255, 255, 0.12); 
+$sc-palette-color-opacity-20-neutral-00: rgba(255, 255, 255, 0.20); 
+$sc-palette-color-opacity-32-neutral-00: rgba(255, 255, 255, 0.32); 
+$sc-palette-color-opacity-50-neutral-00: rgba(255, 255, 255, 0.50); 
+
+$sc-palette-color-opacity-80-neutral-100: rgba(20, 20, 20, 0.8);
+
 //skys
 $sc-palette-color-sky-00: #f5f9fB; 
 $sc-palette-color-sky-20: #cedee7; 
+$sc-palette-color-sky-25: #b7d0dc; 
 $sc-palette-color-sky-75: #23779a; 
+$sc-palette-color-sky-85: #184e62; 
 
 
 //greens
 $sc-palette-color-green-05: #f0f8f0; 
+$sc-palette-color-green-25: #b1ddb4; 
 $sc-palette-color-green-75: #008035; 
+$sc-palette-color-green-90: #264528; 
 
 //yellows
 $sc-palette-color-yellow-05: #fffaeb; 
+$sc-palette-color-yellow-25: #ffe699; 
 $sc-palette-color-yellow-50: #ffcc33; 
 $sc-palette-color-yellow-80: #856300; 
+$sc-palette-color-yellow-90: #574305; 
 
 //reds
 $sc-palette-color-red-05: #fee5e5; 
+$sc-palette-color-red-15: #fab2b2; 
+$sc-palette-color-red-25: #f67f7f; 
+$sc-palette-color-red-30: #f46666; 
 $sc-palette-color-red-40: #ec0000; 
 $sc-palette-color-red-50: #cc0000; 
 $sc-palette-color-red-65: #990000; 
+$sc-palette-color-red-90: #430404; 
 
 //blues
 
 //turquoises
+$sc-palette-color-turquoise-20: #a4e1e5;
+$sc-palette-color-turquoise-35: #5fcad0;
 $sc-palette-color-turquoise-75: #127277;
 $sc-palette-color-turquoise-85: #0d5155;
 
 $sc-palette-color-opacity-08-turquoise-70: rgba(19, 126, 132, 0.08);
 $sc-palette-color-opacity-12-turquoise-70: rgba(19, 126, 132, 0.12);
+$sc-palette-color-opacity-14-turquoise-35: rgba(95, 202, 208, 0.14)

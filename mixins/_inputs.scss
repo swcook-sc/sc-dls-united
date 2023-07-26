@@ -42,7 +42,7 @@
     .check-box {
         input[type="checkbox"]:hover+label:hover {
             &::before {
-                border: 1px solid $accent-color;
+                border: 1px solid $border-color-active;
                 transition: all 0.3s;
             }
         }
@@ -67,7 +67,7 @@
                 font-size: 1.25em;
                 margin-right: 1rem;
 
-                border: 1px solid $border-color-active;
+                border: 1px solid $border-color;
                 border-radius: 4px;
                 width: 1.25rem;
                 height: 1.25rem;
