@@ -27,9 +27,15 @@
         box-sizing: border-box;
         transition: all 0.3s;
 
-        &:active,
+        &:active {
+            outline: 2px solid $border-color-active;
+        }
         &:hover {
             outline: 1px solid $border-color-active;
+        }
+
+        &:focus {
+            outline: 2px solid $border-color-active;
         }
     }
 
