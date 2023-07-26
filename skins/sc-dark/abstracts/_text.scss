@@ -1,0 +1,13 @@
+@use './palette' as p;
+
+$text-color-default: p.$sc-palette-color-neutral-00;
+$text-color-soft: p.$sc-palette-color-neutral-30;
+$text-color-disabled: p.$sc-palette-color-opacity-32-neutral-00;
+$text-color-inverted: p.$sc-palette-color-neutral-95;
+$text-color-brand: p.$sc-palette-color-red-15;
+$text-color-info: p.$sc-palette-color-sky-25;
+$text-color-success: p.$sc-palette-color-green-25;
+$text-color-warning: p.$sc-palette-color-yellow-25;
+$text-color-error: p.$sc-palette-color-red-15;
+
+$text-color-accent: p.$sc-palette-color-turquoise-35;

@@ -1,0 +1,13 @@
+@use './palette' as p;
+
+$background-color-default: p.$sc-palette-color-neutral-90;
+$background-color-alternate: p.$sc-palette-color-neutral-95;
+$background-color-soft: p.$sc-palette-color-neutral-100;
+$background-color-strong: p.$sc-palette-color-neutral-25;
+$background-color-inverted: p.$sc-palette-color-neutral-00;
+$background-color-brand: p.$sc-palette-color-red-30;
+$background-color-overlay: p.$sc-palette-color-opacity-80-neutral-100;
+$background-color-info: p.$sc-palette-color-sky-85;
+$background-color-success: p.$sc-palette-color-green-90;
+$background-color-warning: p.$sc-palette-color-yellow-90;
+$background-color-error: p.$sc-palette-color-red-90;
