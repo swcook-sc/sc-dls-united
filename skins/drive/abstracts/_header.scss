@@ -1,0 +1,17 @@
+@use './palette' as p;
+@use './fonts' as f;
+
+// colors
+$header-background-color: p.$drive-palette-color-evergreen;
+$header-foreground-color: p.$drive-palette-color-white;
+$header-column-head-color: p.$drive-palette-color-white;
+
+// fonts
+$header-font-family: f.$font-headline-family;
+$header-mobile-font-size: 2rem;
+$header-tablet-font-size: 2rem;
+$header-desktop-font-size: 2rem;
+
+$header-mobile-height: 3rem;
+$header-tablet-height: 3rem;
+$header-desktop-height: 3rem;

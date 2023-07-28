@@ -1,0 +1,18 @@
+@use './palette' as p;
+
+$link-primary-color: p.$drive-palette-color-evergreen;
+$link-primary-color-hover: p.$drive-palette-color-evergreen;
+$link-primary-color-pressed: p.$drive-palette-color-mint;
+$link-primary-color-visited: p.$drive-palette-color-evergreen;
+$link-primary-color-disabled: p.$drive-palette-color-neutral-20;
+
+$link-secondary-color: p.$drive-palette-color-dark-purple;
+$link-secondary-color-hover: p.$drive-palette-color-dark-purple;
+$link-secondary-color-pressed: p.$drive-palette-color-purple;
+$link-secondary-color-visited: p.$drive-palette-color-dark-purple;
+$link-secondary-color-disabled: p.$drive-palette-color-neutral-20;
+
+$links-colors: 
+$link-primary-color, $link-primary-color-hover, $link-primary-color-pressed, $link-primary-color-visited, $link-primary-color-disabled,
+$link-secondary-color, $link-secondary-color-hover, $link-secondary-color-pressed, $link-secondary-color-visited, $link-secondary-color-disabled;
+

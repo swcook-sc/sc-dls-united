@@ -2,16 +2,16 @@
 @use './fonts' as f;
 
 // colors
-$header-background-color: p.$sc-palette-color-red-50;
-$header-foreground-color: p.$sc-palette-color-neutral-00;
-$header-column-head-color: p.$sc-palette-color-neutral-00;
+$header-background-color: p.$sc-palette-color-neutral-90;
+$header-foreground-color: p.$sc-palette-color-red-25;
+$header-column-head-color: p.$sc-palette-color-red-25;
 
 // fonts
-$header-font-family: f.$font-headline-family;
+$header-font-family: f.$font-secondary-family;
 $header-mobile-font-size: 2rem;
 $header-tablet-font-size: 2rem;
 $header-desktop-font-size: 2rem;
 
-$header-mobile-height: 4rem;
-$header-tablet-height: 6rem;
-$header-desktop-height: 6rem;
+$header-mobile-height: 3rem;
+$header-tablet-height: 3rem;
+$header-desktop-height: 3rem;

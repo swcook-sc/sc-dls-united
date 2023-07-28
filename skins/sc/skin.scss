@@ -58,7 +58,16 @@ $someValue: "Santander Consumer USA";
         a.$border-color-warning,
         a.$border-color-error);
 
-    @include head-mix.build-header(3rem, 3rem, a.$font-secondary-family, 1.75rem, 1.25rem, a.$font-icon-family, a.$sc-palette-color-neutral-00, a.$sc-palette-color-red-40, 'santander');
+    @include head-mix.build-header(
+        a.$header-desktop-height, 
+        a.$header-mobile-height, 
+        a.$header-font-family, 
+        a.$header-desktop-font-size, 
+        a.$header-mobile-font-size, 
+        a.$font-icon-family,  
+        a.$header-background-color, 
+        a.$header-column-head-color,
+        'santander');
 
 
     @include font-mix.build-fonts(a.$font-primary,

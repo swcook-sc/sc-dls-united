@@ -1,0 +1,13 @@
+@use './palette' as p;
+
+$background-color-default: p.$drive-palette-color-white;
+$background-color-alternate: p.$drive-palette-color-light-sky;
+$background-color-soft: p.$drive-palette-color-neutral-10;
+$background-color-strong: p.$drive-palette-color-neutral-40;
+$background-color-inverted: p.$drive-palette-color-black;
+$background-color-brand: p.$drive-palette-color-mint;
+$background-color-overlay: p.$drive-palette-color-neutral-50;
+$background-color-info: p.$drive-palette-color-info-lighter;
+$background-color-success: p.$drive-palette-color-success-lighter;
+$background-color-warning: p.$drive-palette-color-warning-lighter;
+$background-color-error: p.$drive-palette-color-error-lighter;

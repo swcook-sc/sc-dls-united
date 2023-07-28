@@ -1,0 +1,13 @@
+@use './palette' as p;
+
+$text-color-default: p.$drive-palette-color-black;
+$text-color-soft: p.$drive-palette-color-neutral-50;
+$text-color-disabled: p.$drive-palette-color-neutral-30;
+$text-color-inverted: p.$drive-palette-color-white;
+$text-color-brand: p.$drive-palette-color-mint;
+$text-color-info: p.$drive-palette-color-info-base;
+$text-color-success: p.$drive-palette-color-success-base;
+$text-color-warning: p.$drive-palette-color-warning-base;
+$text-color-error: p.$drive-palette-color-error-base;
+
+$text-color-accent: p.$drive-palette-color-gum;

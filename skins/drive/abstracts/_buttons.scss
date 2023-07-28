@@ -1,0 +1,67 @@
+@use './fonts' as f;
+@use './palette' as p;
+
+$button-font-family: f.$font-secondary-family;
+
+$button-primary-color-background-normal:  p.$drive-palette-color-mint;
+$button-primary-color-background-focus: p.$drive-palette-color-gum;
+$button-primary-color-background-active: p.$drive-palette-color-evergreen;
+$button-primary-color-background-disabled: p.$drive-palette-color-lighter-grey;
+
+$button-primary-color-foreground-normal: p.$drive-palette-color-evergreen;
+$button-primary-color-foreground-focus: p.$drive-palette-color-evergreen;
+$button-primary-color-foreground-active: p.$drive-palette-color-white;
+$button-primary-color-foreground-disabled: p.$drive-palette-color-light-grey;
+
+
+
+$button-secondary-color-foreground-normal:  p.$drive-palette-color-evergreen;
+$button-secondary-color-foreground-focus: p.$drive-palette-color-white;
+$button-secondary-background-focus: p.$drive-palette-color-evergreen;
+$button-secondary-color-foreground-active: p.$drive-palette-color-white;
+
+$button-secondary-color-foreground-disabled: p.$drive-palette-color-light-grey;
+
+$button-secondary-color-background-normal: p.$drive-palette-color-white;
+$button-secondary-color-background-focus: p.$drive-palette-color-evergreen;
+$button-secondary-color-background-active: p.$drive-palette-color-evergreen;
+$button-secondary-color-background-disabled: p.$drive-palette-color-lighter-grey;
+
+$button-colors: 
+$button-primary-color-foreground-normal, $button-primary-color-foreground-focus, $button-primary-color-foreground-active, $button-primary-color-foreground-disabled,
+$button-primary-color-background-normal, $button-primary-color-background-focus, $button-primary-color-background-active, $button-primary-color-background-disabled,
+$button-secondary-color-foreground-normal, $button-secondary-color-foreground-focus, $button-secondary-color-foreground-active, $button-secondary-color-foreground-disabled,
+$button-secondary-color-background-normal, $button-secondary-color-background-focus, $button-secondary-color-background-active, $button-secondary-color-background-disabled;
+
+
+$button-border-radius: 1.5rem;
+
+$button-font-size: 1rem;
+$button-height: 3rem;
+$button-min-width: 12.5rem;
+$button-padding-x: 0.625rem;
+$button-padding-side: 2.25rem;
+$button-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+
+// secondary button
+$button-secondary-border: 1px solid;
+$button-secondary-border-active: 2px solid;
+
+// mobile button
+$button-mobile-width: 21.5rem;
+$button-mobile-padding-side: 6.5rem;
+
+// small button
+$button-small-height: 2rem;
+$button-small-border-radius: 2rem;
+$button-small-font-size: 0.75rem;
+$button-small-min-width: 6rem;
+$button-small-padding: 1.6rem;;
+$button-small-border-radius: 2rem;
+
+// round button
+$button-round-height: 2.25rem;
+$button-round-width: 2.25rem;
+$button-round-border-radius: 3.25rem;
+$button-round-padding: 0.625rem;
+$button-round-padding-side: 0.625rem;

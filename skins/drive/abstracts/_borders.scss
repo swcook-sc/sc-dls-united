@@ -1,0 +1,12 @@
+@use './palette' as p;
+
+$border-color-default: p.$drive-palette-color-neutral-40;
+$border-color-soft: p.$drive-palette-color-neutral-20;
+$border-color-hover: p.$drive-palette-color-black;
+$border-color-disabled: p.$drive-palette-color-neutral-30;
+$border-color-alternate: p.$drive-palette-color-light-sky;
+$border-color-inverted: p.$drive-palette-color-white;
+$border-color-info: p.$drive-palette-color-info-darker;
+$border-color-success: p.$drive-palette-color-success-darker;
+$border-color-warning: p.$drive-palette-color-warning-darker;
+$border-color-error: p.$drive-palette-color-error-darker;
