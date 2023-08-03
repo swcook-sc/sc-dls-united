@@ -143,6 +143,19 @@ $someValue: "Santander Consumer USA";
     }
 
     progress {
-        accent-color: a.$sc-palette-color-red-50; //TODO: Fix this rich!
+        -webkit-appearance: none;
+        width: 100%;
+        height: .25rem;
+
+        &::-webkit-progress-bar {
+            border-radius: .5rem;
+            background-color: a.$background-color-soft;
+        }
+
+        &::-webkit-progress-value {
+            background-color: a.$background-color-brand;
+            border-radius: .5rem;
+        }
+
     }
 }
