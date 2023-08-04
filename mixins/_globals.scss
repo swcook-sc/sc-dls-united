@@ -1,0 +1,12 @@
+// Global variables
+@use "sass:map";
+
+$global-values: ();
+
+@function setGlobalValue($key, $value) {
+    $global-values: map.set($global-values, $key, $value);
+}
+
+@function getGlobalValue($key) {
+    @return $global-values($key);
+}
