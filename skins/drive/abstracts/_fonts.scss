@@ -2,7 +2,7 @@ $font-weight-bold: 700;
 $font-weight-regular: 400;
 $font-weight-light: 100;
 
-$font-primary-path: '../skins/drive/fonts/';
+$font-primary-path: '/skins/drive/fonts/';
 $font-primary-family: 'ABCRepro Text';
 $font-primary-file-regular: 'ABCRepro-Regular.otf';
 $font-primary-file-bold: 'ABCRepro-Bold.otf';
@@ -12,7 +12,7 @@ $font-primary-file-bold-italic: 'ABCRepro-Bold.otf';
 $font-primary-file-light-italic: 'ABCRepro-Light.otf';
 $font-primary: $font-primary-family,$font-primary-path, $font-primary-file-regular, $font-primary-file-bold, $font-primary-file-light, $font-primary-file-italic, $font-primary-file-bold-italic, $font-primary-file-light-italic, $font-weight-regular, $font-weight-bold, $font-weight-light;
 
-$font-secondary-path: '../skins/drive/fonts/';
+$font-secondary-path: '/skins/drive/fonts/';
 $font-secondary-family: 'ABCRepro Text';
 $font-secondary-file-regular: 'ABCRepro-Regular.otf';
 $font-secondary-file-bold: 'ABCRepro-Bold.otf';
@@ -22,7 +22,7 @@ $font-secondary-file-bold-italic: 'ABCRepro-Bold.otf';
 $font-secondary-file-light-italic: 'ABCRepro-Light.otf';
 $font-secondary: $font-secondary-family,$font-secondary-path, $font-secondary-file-regular, $font-secondary-file-bold, $font-secondary-file-light, $font-secondary-file-italic, $font-secondary-file-bold-italic, $font-secondary-file-light-italic, $font-weight-regular, $font-weight-bold, $font-weight-light;
 
-$font-headline-path: '../skins/drive/fonts/';
+$font-headline-path: '/skins/drive/fonts/';
 $font-headline-family: 'ABCRepro Text';
 $font-headline-file-regular: 'ABCRepro-Regular.otf';
 $font-headline-file-bold: 'ABCRepro-Bold.otf';
@@ -32,7 +32,7 @@ $font-headline-file-bold-italic: 'ABCRepro-Bold.otf';
 $font-headline-file-light-italic: 'ABCRepro-Light.otf';
 $font-headline: $font-headline-family,$font-headline-path, $font-headline-file-regular, $font-headline-file-bold, $font-headline-file-light, $font-headline-file-italic, $font-headline-file-bold-italic, $font-headline-file-light-italic, $font-weight-regular, $font-weight-bold, $font-weight-light;
 
-$font-icon-path: '../skins/sc/fonts/SantanderIcons/';
+$font-icon-path: '/skins/sc/fonts/SantanderIcons/';
 $font-icon-family: 'Santander Icons';
 $font-icon-file: 'SantanderIcons.ttf';
 $font-icon: $font-icon-family, $font-icon-path, $font-icon-file, $font-icon-file,$font-icon-file,$font-icon-file,$font-icon-file,$font-icon-file,$font-weight-regular, $font-weight-bold, $font-weight-light;

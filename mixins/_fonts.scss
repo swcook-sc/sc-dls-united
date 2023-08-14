@@ -1,3 +1,5 @@
+@use '../../font-path-fix.scss' as fpf;
+
 @mixin build-fonts($primary, $secondary, $headline, $highlight, $regular, $bold, $light) {
 
         .primary-font {
@@ -30,9 +32,11 @@
 }
 
 @mixin font-face($family, $file, $path, $weight: normal, $style: normal) {
+    $url: url(fpf.$font-path-fix + $path + $file);
+    @warn "path: fix[#{fpf.$font-path-fix}] path[#{$path}] file[#{$file}]  :: #{$url}";
     @font-face {
         font-family: $family;
-        src: url($path + $file);
+        src: $url;
         font-weight: $weight;
         font-style: $style;
     }
