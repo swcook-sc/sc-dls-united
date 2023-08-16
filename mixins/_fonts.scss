@@ -2,15 +2,15 @@
 
 @mixin build-fonts($primary, $secondary, $headline, $highlight, $regular, $bold, $light) {
 
-        .primary-font {
+        .font-primary {
             font-family: nth($primary, 1) ; //first element is the family name
         }
     
-        .secondary-font {
+        .font-secondary {
             font-family: nth($secondary, 1);
         }
     
-        .headline-font {
+        .font-headline {
             font-family: nth($headline, 1);
         }
     	
