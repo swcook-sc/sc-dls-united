@@ -14,7 +14,8 @@
             font-family: nth($headline, 1);
         }
     	
-    .bold {
+    .bold,
+    .strong {
         font-weight: $bold;
     }
 

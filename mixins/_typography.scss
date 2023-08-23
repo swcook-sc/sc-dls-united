@@ -1,193 +1,51 @@
-// @use "sass:math";
+@use './breakpoints' as bp;
 
-$tablet: 768px;
+// for now we'll keep these constants in this file. We may have to 
+// bring these values in thru params in the future tho.
 
-$baseline-px: 4px;
+$typography-h1-font-size-mobile: 2.625rem;
+$typography-h1-line-height-mobile: 3.25rem;
+$typography-h2-font-size-mobile: 1.75rem;
+$typography-h2-line-height-mobile: 2rem;
+$typography-h3-font-size-mobile: 1.5rem;
+$typography-h3-line-height-mobile: 2rem;
+$typography-h4-font-size-mobile: 1.25rem;
+$typography-h4-line-height-mobile: 1.5rem;
+$typography-h5-font-size-mobile: 1.125rem;
+$typography-h5-line-height-mobile: 1.5rem;
+$typography-h6-font-size-mobile: 1rem;
+$typography-h6-line-height-mobile: 1.5rem;
 
-$paragraph-spacing-ratio: 1.25;
+$typography-caption-font-size-mobile: .75rem;
+$typography-caption-line-height-mobile: 1.25rem;
+$typography-body-small-font-size-mobile: 0.875rem;
+$typography-body-small-line-height-mobile: 1.25rem;
+$typography-body-font-size-mobile: 1rem;
+$typography-body-line-height-mobile: 1.5rem;
+$typography-body-large-font-size-mobile: 1.125rem;
+$typography-body-large-line-height-mobile: 1.5rem;
 
-@mixin typographicSpacing($font-size-px, $line-height-px: $font-size-px, $padding-bottom-px: 0px, $padding-top-minimum-px: 0px) {
+$typography-h1-font-size-desktop: 3rem;
+$typography-h1-line-height-desktop: 3.75rem;
+$typography-h2-font-size-desktop: 2.625rem;
+$typography-h2-line-height-desktop: 3.25rem;
+$typography-h3-font-size-desktop: 1.75rem;
+$typography-h3-line-height-desktop: 2rem;
+$typography-h4-font-size-desktop: 1.5rem;
+$typography-h4-line-height-desktop: 2rem;
+$typography-h5-font-size-desktop: 1.25rem;
+$typography-h5-line-height-desktop: 1.5rem;
+$typography-h6-font-size-desktop: 1.125rem;
+$typography-h6-line-height-desktop: 1.5rem;
 
-	$padding-top-units: ceil(($padding-bottom-px + $padding-top-minimum-px) / $baseline-px);
-	// @debug $padding-top-units;
-
-	$padding-top-px: ($padding-top-units * $baseline-px) - $padding-bottom-px;
-	// @debug $padding-top-px;
-
-	margin: 0;
-	font-size: $font-size-px;
-	line-height: $line-height-px;
-	padding-top: $padding-top-px;
-	padding-bottom: $padding-bottom-px;
-}
-
-@mixin header60() {
-	@include typographicSpacing(42px, 52px);
-
-	@media (min-width: $tablet) {
-		@include typographicSpacing(42px, 52px);
-	}
-}
-
-@mixin header54() {
-	@include typographicSpacing(36px, 44px);
-
-	@media (min-width: $tablet) {
-		@include typographicSpacing(54px, 64px);
-	}
-}
-
-@mixin header48() {
-	@include typographicSpacing(32px, 36px);
-
-	@media (min-width: $tablet) {
-		@include typographicSpacing(48px, 60px);
-	}
-}
-
-@mixin header42() {
-	@include typographicSpacing(32px, 36px, 12px);
-
-	@media (min-width: $tablet) {
-		@include typographicSpacing(42px, 52px, 12px);
-	}
-}
-
-@mixin header36() {
-	@include typographicSpacing(32px, 36px, 12px, 1px);
-
-	@media (min-width: $tablet) {
-		@include typographicSpacing(36px, 44px, 12px, 1px);
-	}
-}
-
-@mixin header32() {
-	@include typographicSpacing(28px, 32px, 12px, 1px);
-
-	@media (min-width: $tablet) {
-		@include typographicSpacing(32px, 36px, 12px, 1px);
-	}
-}
-
-@mixin header28() {
-	@include typographicSpacing(24px, 32px, 12px, 1px);
-
-	@media (min-width: $tablet) {
-		@include typographicSpacing(28px, 32px, 12px, 1px);
-	}
-}
-
-@mixin header24() {
-	@include typographicSpacing(20px, 24px, 12px, 1px);
-
-	@media (min-width: $tablet) {
-		@include typographicSpacing(24px, 32px, 12px, 1px);
-	}
-}
-
-@mixin header20() {
-	@include typographicSpacing(18px, 24px, 12px, 1px);
-
-	@media (min-width: $tablet) {
-		@include typographicSpacing(20px, 24px, 12px, 1px);
-	}
-}
-
-
-@mixin paragraphSpacing($font-size-px, $line-height-px) {
-	@include typographicSpacing($font-size-px, $line-height-px, ceil($font-size-px * 1.25));
-}
-
-
-@mixin paragraph18() {
-	@include paragraphSpacing(16px, 24px);
-
-	@media (min-width: $tablet) {
-		@include paragraphSpacing(18px, 24px);
-	}
-}
-
-@mixin paragraph16() {
-	// TODO FIXME 14px font wants 20px of line-height and DSM prescribes 18px
-	// 18px is also not on 4px baseline
-	@include paragraphSpacing(14px, 20px);
-
-	@media (min-width: $tablet) {
-		@include paragraphSpacing(16px, 24px);
-	}
-}
-
-@mixin paragraph14() {
-	@include paragraphSpacing(14px, 20px);
-}
-
-@mixin paragraph12() {
-	@include paragraphSpacing(12px, 16px);
-
-	// @media (min-width: $tablet) {
-	// 	@include paragraphSpacing(12px, 16px);
-	// }
-}
-
-@mixin text-emphasis-variant($color, $hover) {
-	color: $color;
-
-	&:hover,
-	&:focus {
-		color: $hover;
-	}
-}
-
-
-@mixin tab-focus() {
-	// Default
-	outline: thin dotted;
-	// WebKit
-	outline: 5px auto -webkit-focus-ring-color;
-	outline-offset: -2px;
-}
-
-@mixin list-unstyled {
-	padding-left: 0;
-	list-style: none;
-}
-
-
-@mixin descriptor-text() {
-	font-family: 'SantanderMicro';
-
-	display: inline-block;
-
-	color: $primary-color;
-	border-bottom: 1px solid $primary-color;
-	// text-decoration: underline;
-
-	@include paragraph12();
-
-	// this is an over-ride to bring the border to baseline
-	padding-bottom: 3px;
-	// make up the subtracted value from padding as margin to keep subsequent elements on baseline
-	margin-bottom: 6px;
-}
-
-@mixin text-overflow() {
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-}
-
-@mixin clearfix() {
-
-	&:before,
-	&:after {
-		content: " "; // 1
-		display: table; // 2
-	}
-
-	&:after {
-		clear: both;
-	}
-}
+$typography-caption-font-size-desktop: .75rem;
+$typography-caption-line-height-desktop: 1.25rem;
+$typography-body-small-font-size-desktop: 0.875rem;
+$typography-body-small-line-height-desktop: 1.25rem;
+$typography-body-font-size-desktop: 1rem;
+$typography-body-line-height-desktop: 1.5rem;
+$typography-body-large-font-size-desktop: 1.125rem;
+$typography-body-large-line-height-desktop: 1.5rem;
 
 
 @mixin clip($c1) {
@@ -198,50 +56,6 @@ $paragraph-spacing-ratio: 1.25;
 	text-overflow: ellipsis;
 }
 
-@mixin superClips($c1, $c2: $c1, $c3: $c2) {
-	-webkit-line-clamp: $c1;
-
-	@include media-breakpoint-up(lg) {
-		-webkit-line-clamp: $c2;
-	}
-
-	@include media-breakpoint-up(xl) {
-		-webkit-line-clamp: $c3;
-	}
-
-	display: -webkit-box;
-	-webkit-box-orient: vertical;
-	overflow: hidden;
-	text-overflow: ellipsis;
-}
-
-@mixin clip($c1) {
-	-webkit-line-clamp: $c1;
-	display: -webkit-box;
-	-webkit-box-orient: vertical;
-	overflow: hidden;
-	text-overflow: ellipsis;
-}
-
-@mixin typographicSpacingX($font-size, $padding-bottom, $line-height-units: 6, $overall-height-units: ($line-height-units + 1)){
-	margin: 0;
-	font-size: $font-size;
-
-	$line-height: $baseline * $line-height-units;
-	line-height: $line-height;
-
-	$padding-top: (($overall-height-units - $line-height-units ) * $baseline ) - $padding-bottom;
-
-	padding-top: $padding-top;
-	padding-bottom: $padding-bottom;
-
-}
-
-@mixin legal-text(){
-	font-family: $font-family-micro;
-
-	@include typographicSpacingX(12px, 11px, 5, 10);
-}
 
 @mixin build-typography($font-family-headline, $font-family-primary, $font-weight, $text-color) {
     h1,
@@ -251,59 +65,116 @@ $paragraph-spacing-ratio: 1.25;
 	h5,
 	h6 {
 	font-family: $font-family-headline;
-	font-weight: 400;
+	font-weight: $font-weight;
 	font-style: normal;
 	letter-spacing: 0;
 	color: $text-color;
 	}
 
-h1 {
-	@include header42();
-}
+	h1,
+	.h1 {
+		font-size: $typography-h1-font-size-mobile;
+		line-height: $typography-h1-line-height-mobile;
 
-h2 {
-	@include header36();
-}
-
-h3 {
-	@include header32();
-}
-
-h4 {
-	@include header28();
-}
-
-h5 {
-	@include header24();
-}
-
-h6 {
-	@include header20();
-}
-
-p {
-	font-family: $font-family-primary;
-	
-	@include paragraph16();
-
-	&.legal,
-	&.legal-text,
-	&.disclaimer,
-	&.disclosure {
-		@include paragraph12();
+		@include bp.respond-to(bp.$bpTablet) {
+			font-size: $typography-h1-font-size-desktop;
+			line-height: $typography-h1-line-height-desktop;
+		}
 	}
 
-	&.lead,
-	&.lede,
-	&.leed,
-	&.subtitle,
-	&.subheading {
-		@include paragraph18();
+	h2,
+	.h2 {
+		font-size: $typography-h2-font-size-mobile;
+		line-height: $typography-h2-line-height-mobile;
+
+		@include bp.respond-to(bp.$bpTablet) {
+			font-size: $typography-h2-font-size-desktop;
+			line-height: $typography-h2-line-height-desktop;
+		}
 	}
 
-	&.subtitle,
-	&.subheading {
-		font-weight: $font-weight;
+	h3,
+	.h3 {
+		font-size: $typography-h3-font-size-mobile;
+		line-height: $typography-h3-line-height-mobile;
+
+		@include bp.respond-to(bp.$bpTablet) {
+			font-size: $typography-h3-font-size-desktop;
+			line-height: $typography-h3-line-height-desktop;
+		}
 	}
-}
+
+	h4
+	.h4 {
+		font-size: $typography-h4-font-size-mobile;
+		line-height: $typography-h4-line-height-mobile;
+
+		@include bp.respond-to(bp.$bpTablet) {
+			font-size: $typography-h4-font-size-desktop;
+			line-height: $typography-h4-line-height-desktop;
+		}
+	}
+
+	h5,
+	.h5 {
+		font-size: $typography-h5-font-size-mobile;
+		line-height: $typography-h5-line-height-mobile;
+
+		@include bp.respond-to(bp.$bpTablet) {
+			font-size: $typography-h5-font-size-desktop;
+			line-height: $typography-h5-line-height-desktop;
+		}
+	}
+
+	h6,
+	.h6 {
+		font-size: $typography-h6-font-size-mobile;
+		line-height: $typography-h6-line-height-mobile;
+
+		@include bp.respond-to(bp.$bpTablet) {
+			font-size: $typography-h6-font-size-desktop;
+			line-height: $typography-h6-line-height-desktop;
+		}
+	}
+
+	p {
+		font-family: $font-family-primary;
+		line-height: $typography-body-line-height-mobile;
+		font-size: $typography-body-font-size-mobile;
+
+		@include bp.respond-to(bp.$bpTablet) {
+			line-height: $typography-body-line-height-desktop;
+			font-size: $typography-body-font-size-desktop;	
+		}
+
+		&.caption {
+			line-height: $typography-caption-line-height-mobile;
+			font-size: $typography-caption-font-size-mobile;
+
+			@include bp.respond-to(bp.$bpTablet) {
+				line-height: $typography-caption-line-height-desktop;
+				font-size: $typography-caption-font-size-desktop;
+			}
+		}
+
+		&.small {
+			line-height: $typography-body-small-line-height-mobile;
+			font-size: $typography-body-small-font-size-mobile;
+
+			@include bp.respond-to(bp.$bpTablet) {
+				line-height: $typography-body-small-line-height-desktop;
+				font-size: $typography-body-small-font-size-desktop;
+			}
+		}
+
+		&.large {
+			line-height: $typography-body-large-line-height-mobile;
+			font-size: $typography-body-large-font-size-mobile;
+
+			@include bp.respond-to(bp.$bpTablet) {
+				line-height: $typography-body-large-line-height-desktop;
+				font-size: $typography-body-large-font-size-desktop;
+			}
+		}
+	}
 }

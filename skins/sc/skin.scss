@@ -81,8 +81,8 @@ $someValue: "Santander Consumer USA";
     @include font-mix.declare-fonts(a.$font-icon...);
 
     @include type-mix.build-typography(a.$font-headline-family,
-        a.$font-primary-family,
-        a.$font-weight-bold,
+        a.$font-secondary-family,
+        a.$font-weight-regular,
         a.$text-color-default );
 
     @include link-mix.build-links(a.$links-colors...);
