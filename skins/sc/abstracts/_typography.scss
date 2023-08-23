@@ -1,0 +1,49 @@
+@use './fonts' as font;
+$typography-font-family-headline: font.$font-headline-family;
+$typography-font-family-normal: font.$font-primary-family;
+$typography-font-family-caption: font.$font-secondary-family;
+
+$typography-h1-font-size-mobile: 2.625rem;
+$typography-h1-line-height-mobile: 3.25rem;
+$typography-h2-font-size-mobile: 1.75rem;
+$typography-h2-line-height-mobile: 2rem;
+$typography-h3-font-size-mobile: 1.5rem;
+$typography-h3-line-height-mobile: 2rem;
+$typography-h4-font-size-mobile: 1.25rem;
+$typography-h4-line-height-mobile: 1.5rem;
+$typography-h5-font-size-mobile: 1.125rem;
+$typography-h5-line-height-mobile: 1.5rem;
+$typography-h6-font-size-mobile: 1rem;
+$typography-h6-line-height-mobile: 1.5rem;
+
+$typography-caption-font-size-mobile: .75rem;
+$typography-caption-line-height-mobile: 1.25rem;
+$typography-body-small-font-size-mobile: 0.875rem;
+$typography-body-small-line-height-mobile: 1.25rem;
+$typography-body-font-size-mobile: 1rem;
+$typography-body-line-height-mobile: 1.5rem;
+$typography-body-large-font-size-mobile: 1.125rem;
+$typography-body-large-line-height-mobile: 1.5rem;
+
+$typography-h1-font-size-desktop: 3rem;
+$typography-h1-line-height-desktop: 3.75rem;
+$typography-h2-font-size-desktop: 2.625rem;
+$typography-h2-line-height-desktop: 3.25rem;
+$typography-h3-font-size-desktop: 1.75rem;
+$typography-h3-line-height-desktop: 2rem;
+$typography-h4-font-size-desktop: 1.5rem;
+$typography-h4-line-height-desktop: 2rem;
+$typography-h5-font-size-desktop: 1.25rem;
+$typography-h5-line-height-desktop: 1.5rem;
+$typography-h6-font-size-desktop: 1.125rem;
+$typography-h6-line-height-desktop: 1.5rem;
+
+$typography-caption-font-size-desktop: .75rem;
+$typography-caption-line-height-desktop: 1.25rem;
+$typography-body-small-font-size-desktop: 0.875rem;
+$typography-body-small-line-height-desktop: 1.25rem;
+$typography-body-font-size-desktop: 1rem;
+$typography-body-line-height-desktop: 1.5rem;
+$typography-body-large-font-size-desktop: 1.125rem;
+$typography-body-large-line-height-desktop: 1.5rem;
+
