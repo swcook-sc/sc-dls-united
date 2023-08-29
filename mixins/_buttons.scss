@@ -1,6 +1,6 @@
 $cursor-disabled: not-allowed;
 
-@mixin build-buttons($selector, $font-family, $font-size, $height, $min-width, $border-radius, $button-shadow, $padding-x, $padding-y,
+@mixin build-buttons($selector, $font-family, $font-size, $height, $min-width, $border-radius, $button-shadow, $secondary-border-width, $padding-x, $padding-y,
                     $button-primary-color-foreground-normal, $button-primary-color-foreground-focus, $button-primary-color-foreground-active, $button-primary-color-foreground-disabled,
                     $button-primary-color-background-normal, $button-primary-color-background-focus, $button-primary-color-background-active, $button-primary-color-background-disabled,
                     $button-secondary-color-foreground-normal, $button-secondary-color-foreground-focus, $button-secondary-color-foreground-active, $button-secondary-color-foreground-disabled,
@@ -61,6 +61,7 @@ $cursor-disabled: not-allowed;
             background-color: $button-secondary-color-background-normal;
             color: $button-secondary-color-foreground-normal;
             outline: 1px solid $button-secondary-color-background-normal;
+            border: $secondary-border-width solid $button-secondary-color-foreground-normal;
             box-shadow: 0px 1px 6px rgba(68, 68, 68, 0.2);
             font-weight: 700;
 
@@ -90,6 +91,7 @@ $cursor-disabled: not-allowed;
             fieldset[disabled] & {
                 cursor: $cursor-disabled;
                 background-color: $button-secondary-color-background-disabled;
+                border: 0;
                 color: $button-secondary-color-foreground-disabled;
                 font-weight: 400;
             }
