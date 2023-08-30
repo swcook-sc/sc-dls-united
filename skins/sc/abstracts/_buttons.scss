@@ -26,15 +26,34 @@ $buttonMap : (
     keys.$keyButtonSecondaryColorForegroundDisabled: p.$sc-palette-color-opacity-23-neutral-95,
     
     keys.$keyButtonFontSize: 1rem,
+    keys.$keyButtonSmallFontSize: 0.75rem,
+    keys.$keyButtonRoundFontSize: 1rem,
+    
     keys.$keyButtonHeight:   3rem,
+    keys.$keyButtonSmallHeight:   2rem,
+    keys.$keyButtonRoundHeight:   2.25rem,
+
     keys.$keyButtonMinWidth: 12.5rem,
+    keys.$keyButtonSmallMinWidth: 6rem,
+    keys.$keyButtonRoundMinWidth: 2.25rem,
+
     keys.$keyButtonBorderRadius: 1.5rem,
+    keys.$keyButtonSmallBorderRadius: 2rem,
+    keys.$keyButtonRoundBorderRadius: 3.25rem,
+    
     keys.$keyButtonShadow: 0px 2px 3px rgba(0, 0, 0, 0.2),
     keys.$keyButtonSecondaryShadow: 0px 2px 3px rgba(0, 0, 0, 0.2),
     keys.$keyButtonBorder: 1px solid,
     keys.$keyButtonSecondaryBorder: 2px solid,
+
     keys.$keyButtonPaddingX: 0.625rem,
+    keys.$keyButtonSmallPaddingX: 0.625rem,
+    keys.$keyButtonRoundPaddingX: 0.625rem,
+
     keys.$keyButtonPaddingY: 2.25rem,
+    keys.$keyButtonSmallPaddingY: 2.25rem,
+    keys.$keyButtonRoundPaddingY: 0.65rem,
+
     keys.$keyButtonMobileWidth: 21.5rem,
     keys.$keyButtonMobilePaddingX: 6.5rem
 
@@ -97,6 +116,6 @@ $button-small-border-radius: 2rem;
 // round button
 $button-round-height: 2.25rem;
 $button-round-width: 2.25rem;
-$button-round-border-radius: 3.25rem;
+$button-round-border-radius: 2rem;
 $button-round-padding: 0.625rem;
 $button-round-padding-side: 0.625rem;

@@ -37,15 +37,17 @@ $keyButtonSmallHeight: 'small-height';
 $keyButtonSmallBorderRadius: 'small-border-radius';
 $keyButtonSmallFontSize: 'small-font-size';
 $keyButtonSmallMinWidth: 'small-min-width';
-$keyButtonSmallPadding: 'small-padding';
+$keyButtonSmallPaddingX: 'small-padding-x';
+$keyButtonSmallPaddingY: 'small-padding-y';
 $keyButtonSmallBorderRadius: 'small-border-radius';
 
 // round button
 $keyButtonRoundHeight: 'round-height';
-$keyButtonRoundWidth: 'round-width';
-$keyButtonRoundBorder-radius: 'round-border-radius';
-$keyButtonRoundPadding: 'round-padding';
+$keyButtonRoundMinWidth: 'round-min-width';
+$keyButtonRoundFontSize: 'round-font-size';
 $keyButtonRoundBorderRadius: 'round-border-radius';
+$keyButtonRoundPaddingX: 'round-padding-x';
+$keyButtonRoundPaddingY: 'round-padding-y';
 
 $cursor-disabled: not-allowed;
 
@@ -64,7 +66,6 @@ $cursor-disabled: not-allowed;
         background-image: none;
         border: none;
         font-weight: 700;
-
 
         font-family: $font-family;
         height: $height;
@@ -150,16 +151,34 @@ $cursor-disabled: not-allowed;
 
 @mixin build-buttons($buttonMap) {
     $font-family: map.get($buttonMap, $keyButtonFontFamily);
+
     $font-size: map.get($buttonMap, $keyButtonFontSize);
+    $font-size-small: map.get($buttonMap, $keyButtonSmallFontSize);
+    $font-size-round: map.get($buttonMap, $keyButtonRoundFontSize);
+
     $height: map.get($buttonMap, $keyButtonHeight);
+    $height-small: map.get($buttonMap, $keyButtonSmallHeight);
+    $height-round: map.get($buttonMap, $keyButtonRoundHeight);
+
     $min-width: map.get($buttonMap, $keyButtonMinWidth);
+    $min-width-small: map.get($buttonMap, $keyButtonSmallMinWidth);
+    $min-width-round: map.get($buttonMap, $keyButtonRoundMinWidth);
+
     $border-radius: map.get($buttonMap, $keyButtonBorderRadius);
+    $border-radius-small: map.get($buttonMap, $keyButtonSmallBorderRadius);
+    $border-radius-round: map.get($buttonMap, $keyButtonRoundBorderRadius);
     $border: map.get($buttonMap, $keyButtonBorder);
     $secondary-border: map.get($buttonMap, $keyButtonSecondaryBorder);
     $shadow: map.get($buttonMap, $keyButtonShadow);
     $secondary-shadow: map.get($buttonMap, $keyButtonSecondaryShadow);
+
     $padding-x: map.get($buttonMap, $keyButtonPaddingX);
+    $padding-x-small: map.get($buttonMap, $keyButtonSmallPaddingX);
+    $padding-x-round: map.get($buttonMap, $keyButtonRoundPaddingX);
+
     $padding-y: map.get($buttonMap, $keyButtonPaddingY);
+    $padding-y-small: map.get($buttonMap, $keyButtonSmallPaddingY);
+    $padding-y-round: map.get($buttonMap, $keyButtonRoundPaddingY);
     
 
     $button-primary-color-foreground-normal: map.get($buttonMap, $keyButtonPrimaryColorForegroundNormal);
@@ -182,9 +201,11 @@ $cursor-disabled: not-allowed;
     $button-secondary-color-background-active: map.get($buttonMap, $keyButtonSecondaryColorBackgroundActive);
     $button-secondary-color-background-disabled: map.get($buttonMap, $keyButtonSecondaryColorBackgroundDisabled);
 
-    @include build-button-set('button', 
+    @include build-button-set(
+    '.button',                  //selector
     $font-family,               //font-family, 
     $font-size,                 //font-size, , 
+    $height,                    //height
     $min-width,                 //min-width, 
     $border-radius,             //-radius, 
     $shadow,//-shadow, 
@@ -206,5 +227,62 @@ $cursor-disabled: not-allowed;
     $button-secondary-color-background-normal,//-secondary-color-background-normal, 
     $button-secondary-color-background-focus,//-secondary-color-background-focus, 
     $button-secondary-color-background-active,//-secondary-color-background-active, 
-    $button-secondary-color-background-disabled, red); //-secondary-color-background-disabled)
+    $button-secondary-color-background-disabled); //-secondary-color-background-disabled)
+
+    @include build-button-set(
+    '.button-small',                  //selector
+    $font-family,               //font-family, 
+    $font-size-small,                 //font-size, , 
+    $height-small,                    //height
+    $min-width-small,                 //min-width, 
+    $border-radius-small,             //-radius, 
+    $shadow,//-shadow, 
+    $border,//-border-, 
+    $padding-x,//padding-x, 
+    $padding-y,//padding-y, 
+    $button-primary-color-foreground-normal,//-primary-color-foreground-normal, 
+    $button-primary-color-foreground-focus,//-primary-color-foreground-focus, 
+    $button-primary-color-foreground-active,//-primary-color-foreground-active, 
+    $button-primary-color-foreground-disabled,//-primary-color-foreground-disabled, 
+    $button-primary-color-background-normal,//-primary-color-background-normal, 
+    $button-primary-color-background-focus,//-primary-color-background-focus, 
+    $button-primary-color-background-active,//-primary-color-background-active, 
+    $button-primary-color-background-disabled,//-primary-color-background-disabled, 
+    $button-secondary-color-foreground-normal,//-secondary-color-foreground-normal, 
+    $button-secondary-color-foreground-focus,//-secondary-color-foreground-focus, 
+    $button-secondary-color-foreground-active,//-secondary-color-foreground-active, 
+    $button-secondary-color-foreground-disabled,//-secondary-color-foreground-disabled, 
+    $button-secondary-color-background-normal,//-secondary-color-background-normal, 
+    $button-secondary-color-background-focus,//-secondary-color-background-focus, 
+    $button-secondary-color-background-active,//-secondary-color-background-active, 
+    $button-secondary-color-background-disabled); //-secondary-color-background-disabled)
+
+    @include build-button-set(
+        '.button-round',                  //selector
+        'Santander Icons',               //font-family, 
+        $font-size-round,                 //font-size, , 
+        $height-round,                    //height
+        $min-width-round,                 //min-width, 
+        $border-radius-round,             //-radius, 
+        $shadow,//-shadow, 
+        $border,//-border-, 
+        $padding-x-round,//padding-x, 
+        $padding-y-round,//padding-y, 
+        $button-primary-color-foreground-normal,//-primary-color-foreground-normal, 
+        $button-primary-color-foreground-focus,//-primary-color-foreground-focus, 
+        $button-primary-color-foreground-active,//-primary-color-foreground-active, 
+        $button-primary-color-foreground-disabled,//-primary-color-foreground-disabled, 
+        $button-primary-color-background-normal,//-primary-color-background-normal, 
+        $button-primary-color-background-focus,//-primary-color-background-focus, 
+        $button-primary-color-background-active,//-primary-color-background-active, 
+        $button-primary-color-background-disabled,//-primary-color-background-disabled, 
+        $button-secondary-color-foreground-normal,//-secondary-color-foreground-normal, 
+        $button-secondary-color-foreground-focus,//-secondary-color-foreground-focus, 
+        $button-secondary-color-foreground-active,//-secondary-color-foreground-active, 
+        $button-secondary-color-foreground-disabled,//-secondary-color-foreground-disabled, 
+        $button-secondary-color-background-normal,//-secondary-color-background-normal, 
+        $button-secondary-color-background-focus,//-secondary-color-background-focus, 
+        $button-secondary-color-background-active,//-secondary-color-background-active, 
+        $button-secondary-color-background-disabled); //-secondary-color-background-disabled)
 }
+
