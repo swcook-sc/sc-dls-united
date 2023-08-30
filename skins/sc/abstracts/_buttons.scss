@@ -1,8 +1,46 @@
 @use './fonts' as f;
 @use './palette' as p;
+@use '../../../mixins/buttons-v2' as keys;
+
+$buttonMap : (
+    keys.$keyButtonFontFamily: f.$font-secondary-family,
+
+    keys.$keyButtonPrimaryColorBackgroundNormal: p.$sc-palette-color-red-40,
+    keys.$keyButtonPrimaryColorBackgroundFocus: p.$sc-palette-color-red-50,
+    keys.$keyButtonPrimaryColorBackgroundActive: p.$sc-palette-color-red-65,
+    keys.$keyButtonPrimaryColorBackgroundDisabled: p.$sc-palette-color-opacity-06-neutral-95,
+
+    keys.$keyButtonPrimaryColorForegroundNormal: p.$sc-palette-color-neutral-00,
+    keys.$keyButtonPrimaryColorForegroundFocus: p.$sc-palette-color-neutral-00,
+    keys.$keyButtonPrimaryColorForegroundActive: p.$sc-palette-color-neutral-00,
+    keys.$keyButtonPrimaryColorForegroundDisabled: p.$sc-palette-color-opacity-23-neutral-95,    
+    
+    keys.$keyButtonSecondaryColorBackgroundNormal: p.$sc-palette-color-neutral-00,
+    keys.$keyButtonSecondaryColorBackgroundFocus:  p.$sc-palette-color-neutral-00,
+    keys.$keyButtonSecondaryColorBackgroundActive: p.$sc-palette-color-neutral-00,
+    keys.$keyButtonSecondaryColorBackgroundDisabled: p.$sc-palette-color-opacity-06-neutral-95,
+
+    keys.$keyButtonSecondaryColorForegroundNormal: p.$sc-palette-color-red-40,
+    keys.$keyButtonSecondaryColorForegroundFocus:  p.$sc-palette-color-red-50,
+    keys.$keyButtonSecondaryColorForegroundActive: p.$sc-palette-color-red-65,
+    keys.$keyButtonSecondaryColorForegroundDisabled: p.$sc-palette-color-opacity-23-neutral-95,
+    
+    keys.$keyButtonFontSize: 1rem,
+    keys.$keyButtonHeight:   3rem,
+    keys.$keyButtonMinWidth: 12.5rem,
+    keys.$keyButtonBorderRadius: 1.5rem,
+    keys.$keyButtonShadow: 0px 2px 3px rgba(0, 0, 0, 0.2),
+    keys.$keyButtonSecondaryShadow: 0px 2px 3px rgba(0, 0, 0, 0.2),
+    keys.$keyButtonBorder: 1px solid,
+    keys.$keyButtonSecondaryBorder: 2px solid,
+    keys.$keyButtonPaddingX: 0.625rem,
+    keys.$keyButtonPaddingY: 2.25rem,
+    keys.$keyButtonMobileWidth: 21.5rem,
+    keys.$keyButtonMobilePaddingX: 6.5rem
+
+);
 
 $button-font-family: f.$font-secondary-family;
-
 $button-primary-color-background-normal:  p.$sc-palette-color-red-40;
 $button-primary-color-background-focus: p.$sc-palette-color-red-50;
 $button-primary-color-background-active: p.$sc-palette-color-red-65;

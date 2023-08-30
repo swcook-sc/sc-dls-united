@@ -2,7 +2,7 @@
 @use "../../mixins/fonts" as font-mix;
 @use "../../mixins/typography" as type-mix;
 @use "../../mixins/links" as link-mix;
-@use "../../mixins/buttons" as but-mix;
+@use "../../mixins/buttons-v2" as but-mix;
 @use "../../mixins/lists" as list-mix;
 @use "../../mixins/headers" as head-mix;
 @use "../../mixins/inputs" as input-mix;
@@ -87,41 +87,6 @@ $someValue: "Santander Consumer USA";
 
     @include link-mix.build-links(a.$links-colors...);
 
-    @include but-mix.build-buttons(".button",
-        a.$font-secondary-family,
-        a.$button-font-size,
-        a.$button-height,
-        a.$button-min-width,
-        a.$button-border-radius,
-        a.$button-shadow,
-        0px,
-        a.$button-padding-x,
-        a.$button-padding-side,
-        a.$button-colors... );
-
-    @include but-mix.build-buttons(".button-small",
-        a.$font-secondary-family,
-        a.$button-font-size,
-        a.$button-small-height,
-        a.$button-small-min-width,
-        a.$button-small-border-radius,
-        a.$button-shadow,
-        0px,
-        a.$button-padding-x,
-        a.$button-padding-side,
-        a.$button-colors... );
-
-    @include but-mix.build-buttons(".button-round",
-        a.$font-icon-family,
-        a.$button-font-size,
-        a.$button-round-height,
-        a.$button-round-width,
-        a.$button-small-border-radius,
-        a.$button-shadow,
-        0px,
-        a.$button-round-padding,
-        a.$button-round-padding-side,
-        a.$button-colors... );
 
     @include list-mix.build-lists(a.$font-secondary-family,
         a.$font-icon-family,
@@ -129,7 +94,7 @@ $someValue: "Santander Consumer USA";
         "checkmark-in-a-circle"
     );
 
-
+    @include but-mix.build-buttons(a.$buttonMap);
 
     @include input-mix.buildInputs(a.$font-secondary-family, 
         a.$text-color-default, 
