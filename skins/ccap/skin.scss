@@ -80,9 +80,9 @@
     @include type-mix.build-typography(a.$font-headline-family, a.$font-primary-family, a.$font-weight-bold, a.$text-color-default);
 
     @include link-mix.build-links(a.$links-colors...);
-    @include but-mix.build-buttons(".button",       a.$font-secondary-family,a.$button-font-size, a.$button-height, a.$button-min-width, a.$button-border-radius, a.$button-shadow, a.$button-padding-x, a.$button-padding-side,  a.$button-colors...);
-    @include but-mix.build-buttons(".button-small", a.$font-secondary-family, a.$button-font-size, a.$button-small-height, a.$button-small-min-width, a.$button-small-border-radius, a.$button-shadow, a.$button-padding-x, a.$button-padding-side, a.$button-colors...);
-    @include but-mix.build-buttons(".button-round", a.$font-icon-family, a.$button-font-size, a.$button-round-height, a.$button-round-width, a.$button-round-border-radius, a.$button-shadow, a.$button-round-padding, a.$button-round-padding-side, a.$button-colors...);
+    @include but-mix.build-buttons(".button",       a.$font-secondary-family,a.$button-font-size, a.$button-height, a.$button-min-width, a.$button-border-radius, a.$button-shadow, 2px, a.$button-padding-x, a.$button-padding-side,  a.$button-colors...);
+    @include but-mix.build-buttons(".button-small", a.$font-secondary-family, a.$button-font-size, a.$button-small-height, a.$button-small-min-width, a.$button-small-border-radius, a.$button-shadow, 2px, a.$button-padding-x, a.$button-padding-side, a.$button-colors...);
+    @include but-mix.build-buttons(".button-round", a.$font-icon-family, a.$button-font-size, a.$button-round-height, a.$button-round-width, a.$button-round-border-radius, a.$button-shadow, 2px, a.$button-round-padding, a.$button-round-padding-side, a.$button-colors...);
     @include list-mix.build-lists(a.$font-secondary-family, a.$font-icon-family, a.$text-color-brand, 'send');
 
     @include input-mix.buildInputs(a.$font-secondary-family, 

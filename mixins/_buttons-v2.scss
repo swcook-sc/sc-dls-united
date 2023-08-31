@@ -1,0 +1,288 @@
+@use "sass:map";
+
+$keyButtonSelector: 'selector';
+$keyButtonFontFamily: 'font-family';
+$keyButtonFontSize: 'font-size';
+$keyButtonHeight: 'height';
+$keyButtonMinWidth: 'min-width';
+$keyButtonBorderRadius: 'border-radius';
+$keyButtonShadow: 'shadow';
+$keyButtonSecondaryShadow: 'secondary-shadow';
+$keyButtonBorder: 'border';
+$keyButtonSecondaryBorder: 'secondary-border';
+$keyButtonPaddingX: 'padding-x';
+$keyButtonPaddingY: 'padding-y';
+$keyButtonPrimaryColorForegroundNormal: 'primary-color-foreground-normal';
+$keyButtonPrimaryColorForegroundFocus: 'primary-color-foreground-focus';
+$keyButtonPrimaryColorForegroundActive: 'primary-color-foreground-active';
+$keyButtonPrimaryColorForegroundDisabled: 'primary-color-foreground-disabled';
+$keyButtonPrimaryColorBackgroundNormal: 'primary-color-background-normal';
+$keyButtonPrimaryColorBackgroundFocus: 'primary-color-background-focus';
+$keyButtonPrimaryColorBackgroundActive: 'primary-color-background-active';
+$keyButtonPrimaryColorBackgroundDisabled: 'primary-color-background-disabled';
+$keyButtonSecondaryColorForegroundNormal: 'secondary-color-foreground-normal';
+$keyButtonSecondaryColorForegroundFocus: 'secondary-color-foreground-focus';
+$keyButtonSecondaryColorForegroundActive: 'secondary-color-foreground-active';
+$keyButtonSecondaryColorForegroundDisabled: 'secondary-color-foreground-disabled';
+$keyButtonSecondaryColorBackgroundNormal: 'secondary-color-background-normal';
+$keyButtonSecondaryColorBackgroundFocus: 'secondary-color-background-focus';
+$keyButtonSecondaryColorBackgroundActive: 'secondary-color-background-active';
+$keyButtonSecondaryColorBackgroundDisabled: 'secondary-color-background-disabled';
+
+$keyButtonMobileWidth: 'mobile-width';
+$keyButtonMobilePaddingX: 'mobile-padding-x';
+
+// small button
+$keyButtonSmallHeight: 'small-height';
+$keyButtonSmallBorderRadius: 'small-border-radius';
+$keyButtonSmallFontSize: 'small-font-size';
+$keyButtonSmallMinWidth: 'small-min-width';
+$keyButtonSmallPaddingX: 'small-padding-x';
+$keyButtonSmallPaddingY: 'small-padding-y';
+$keyButtonSmallBorderRadius: 'small-border-radius';
+
+// round button
+$keyButtonRoundHeight: 'round-height';
+$keyButtonRoundMinWidth: 'round-min-width';
+$keyButtonRoundFontSize: 'round-font-size';
+$keyButtonRoundBorderRadius: 'round-border-radius';
+$keyButtonRoundPaddingX: 'round-padding-x';
+$keyButtonRoundPaddingY: 'round-padding-y';
+
+$cursor-disabled: not-allowed;
+
+@mixin build-button-set($selector, $font-family, $font-size, $height, $min-width, $border-radius, $button-shadow, $secondary-border-width, $padding-x, $padding-y,
+                    $button-primary-color-foreground-normal, $button-primary-color-foreground-focus, $button-primary-color-foreground-active, $button-primary-color-foreground-disabled,
+                    $button-primary-color-background-normal, $button-primary-color-background-focus, $button-primary-color-background-active, $button-primary-color-background-disabled,
+                    $button-secondary-color-foreground-normal, $button-secondary-color-foreground-focus, $button-secondary-color-foreground-active, $button-secondary-color-foreground-disabled,
+                    $button-secondary-color-background-normal, $button-secondary-color-background-focus, $button-secondary-color-background-active, $button-secondary-color-background-disabled
+) {
+    #{$selector} {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        touch-action: manipulation;
+        cursor: pointer;
+        background-image: none;
+        border: none;
+        font-weight: 700;
+
+        font-family: $font-family;
+        height: $height;
+        min-width: $min-width;
+        background-color: $button-primary-color-background-normal;
+        border-radius: $border-radius;
+        color: $button-primary-color-foreground-normal;
+
+        padding-top: $padding-x;
+        padding-bottom: $padding-x;
+        padding-left: $padding-y;
+        padding-right: $padding-y;
+
+        font-size: $font-size;
+
+        &__hover__,
+        &:hover,
+        &:focus {
+            background-color: $button-primary-color-background-focus;
+            color: $button-primary-color-foreground-focus;
+            transition: 350ms;
+
+            outline-offset: 2px;
+            outline: 2px solid blue;
+        }
+
+        &__active__,
+        &:active {
+            background-color: $button-primary-color-background-focus;
+            color: $button-primary-color-foreground-focus;
+            font-weight: 700;
+            box-shadow: $button-shadow;
+        }
+    
+        &[disabled],
+        fieldset[disabled] & {
+            cursor: $cursor-disabled;
+            background-color: $button-primary-color-background-disabled;
+            color: $button-primary-color-foreground-disabled;
+        }
+
+        &.secondary {
+            background-color: $button-secondary-color-background-normal;
+            color: $button-secondary-color-foreground-normal;
+            outline: 1px solid $button-secondary-color-background-normal;
+            border: $secondary-border-width solid $button-secondary-color-foreground-normal;
+            box-shadow: 0px 1px 6px rgba(68, 68, 68, 0.2);
+            font-weight: 700;
+
+            &__hover__,
+            &:hover,
+            &:focus {
+                outline: 2px solid $button-secondary-color-foreground-focus;
+                color: $button-secondary-color-foreground-focus;
+                background-color: $button-secondary-color-background-focus;
+                box-shadow: 1px -1px 3px rgba(68, 68, 68, 0.2);
+
+                transition: 350ms;
+                outline-offset: 2px;
+                outline: 2px solid blue;
+            }
+    
+            &__active__,
+            &:active {
+                outline: 2px solid $button-secondary-color-foreground-active;
+                color: $button-secondary-color-foreground-active;
+                background-color: $button-secondary-color-background-active;
+                outline: 0;
+                box-shadow: 0px 1px 6px rgba(68, 68, 68, 0);
+            }
+        
+            &[disabled],
+            fieldset[disabled] & {
+                cursor: $cursor-disabled;
+                background-color: $button-secondary-color-background-disabled;
+                border: 0;
+                color: $button-secondary-color-foreground-disabled;
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+@mixin build-buttons($buttonMap) {
+    $font-family: map.get($buttonMap, $keyButtonFontFamily);
+
+    $font-size: map.get($buttonMap, $keyButtonFontSize);
+    $font-size-small: map.get($buttonMap, $keyButtonSmallFontSize);
+    $font-size-round: map.get($buttonMap, $keyButtonRoundFontSize);
+
+    $height: map.get($buttonMap, $keyButtonHeight);
+    $height-small: map.get($buttonMap, $keyButtonSmallHeight);
+    $height-round: map.get($buttonMap, $keyButtonRoundHeight);
+
+    $min-width: map.get($buttonMap, $keyButtonMinWidth);
+    $min-width-small: map.get($buttonMap, $keyButtonSmallMinWidth);
+    $min-width-round: map.get($buttonMap, $keyButtonRoundMinWidth);
+
+    $border-radius: map.get($buttonMap, $keyButtonBorderRadius);
+    $border-radius-small: map.get($buttonMap, $keyButtonSmallBorderRadius);
+    $border-radius-round: map.get($buttonMap, $keyButtonRoundBorderRadius);
+    $border: map.get($buttonMap, $keyButtonBorder);
+    $secondary-border: map.get($buttonMap, $keyButtonSecondaryBorder);
+    $shadow: map.get($buttonMap, $keyButtonShadow);
+    $secondary-shadow: map.get($buttonMap, $keyButtonSecondaryShadow);
+
+    $padding-x: map.get($buttonMap, $keyButtonPaddingX);
+    $padding-x-small: map.get($buttonMap, $keyButtonSmallPaddingX);
+    $padding-x-round: map.get($buttonMap, $keyButtonRoundPaddingX);
+
+    $padding-y: map.get($buttonMap, $keyButtonPaddingY);
+    $padding-y-small: map.get($buttonMap, $keyButtonSmallPaddingY);
+    $padding-y-round: map.get($buttonMap, $keyButtonRoundPaddingY);
+    
+
+    $button-primary-color-foreground-normal: map.get($buttonMap, $keyButtonPrimaryColorForegroundNormal);
+    $button-primary-color-foreground-focus: map.get($buttonMap, $keyButtonPrimaryColorForegroundFocus);
+    $button-primary-color-foreground-active: map.get($buttonMap, $keyButtonPrimaryColorForegroundActive);
+    $button-primary-color-foreground-disabled: map.get($buttonMap, $keyButtonPrimaryColorForegroundDisabled);
+
+    $button-primary-color-background-normal: map.get($buttonMap, $keyButtonPrimaryColorBackgroundNormal);
+    $button-primary-color-background-focus: map.get($buttonMap, $keyButtonPrimaryColorBackgroundFocus);
+    $button-primary-color-background-active: map.get($buttonMap, $keyButtonPrimaryColorBackgroundActive);
+    $button-primary-color-background-disabled: map.get($buttonMap, $keyButtonPrimaryColorBackgroundDisabled);
+
+    $button-secondary-color-foreground-normal: map.get($buttonMap, $keyButtonSecondaryColorForegroundNormal);
+    $button-secondary-color-foreground-focus: map.get($buttonMap, $keyButtonSecondaryColorForegroundFocus);
+    $button-secondary-color-foreground-active: map.get($buttonMap, $keyButtonSecondaryColorForegroundActive);
+    $button-secondary-color-foreground-disabled: map.get($buttonMap, $keyButtonSecondaryColorForegroundDisabled);
+
+    $button-secondary-color-background-normal: map.get($buttonMap, $keyButtonSecondaryColorBackgroundNormal);
+    $button-secondary-color-background-focus: map.get($buttonMap, $keyButtonSecondaryColorBackgroundFocus);
+    $button-secondary-color-background-active: map.get($buttonMap, $keyButtonSecondaryColorBackgroundActive);
+    $button-secondary-color-background-disabled: map.get($buttonMap, $keyButtonSecondaryColorBackgroundDisabled);
+
+    @include build-button-set(
+    '.button',                  //selector
+    $font-family,               //font-family, 
+    $font-size,                 //font-size, , 
+    $height,                    //height
+    $min-width,                 //min-width, 
+    $border-radius,             //-radius, 
+    $shadow,//-shadow, 
+    $border,//-border-, 
+    $padding-x,//padding-x, 
+    $padding-y,//padding-y, 
+    $button-primary-color-foreground-normal,//-primary-color-foreground-normal, 
+    $button-primary-color-foreground-focus,//-primary-color-foreground-focus, 
+    $button-primary-color-foreground-active,//-primary-color-foreground-active, 
+    $button-primary-color-foreground-disabled,//-primary-color-foreground-disabled, 
+    $button-primary-color-background-normal,//-primary-color-background-normal, 
+    $button-primary-color-background-focus,//-primary-color-background-focus, 
+    $button-primary-color-background-active,//-primary-color-background-active, 
+    $button-primary-color-background-disabled,//-primary-color-background-disabled, 
+    $button-secondary-color-foreground-normal,//-secondary-color-foreground-normal, 
+    $button-secondary-color-foreground-focus,//-secondary-color-foreground-focus, 
+    $button-secondary-color-foreground-active,//-secondary-color-foreground-active, 
+    $button-secondary-color-foreground-disabled,//-secondary-color-foreground-disabled, 
+    $button-secondary-color-background-normal,//-secondary-color-background-normal, 
+    $button-secondary-color-background-focus,//-secondary-color-background-focus, 
+    $button-secondary-color-background-active,//-secondary-color-background-active, 
+    $button-secondary-color-background-disabled); //-secondary-color-background-disabled)
+
+    @include build-button-set(
+    '.button-small',                  //selector
+    $font-family,               //font-family, 
+    $font-size-small,                 //font-size, , 
+    $height-small,                    //height
+    $min-width-small,                 //min-width, 
+    $border-radius-small,             //-radius, 
+    $shadow,//-shadow, 
+    $border,//-border-, 
+    $padding-x,//padding-x, 
+    $padding-y,//padding-y, 
+    $button-primary-color-foreground-normal,//-primary-color-foreground-normal, 
+    $button-primary-color-foreground-focus,//-primary-color-foreground-focus, 
+    $button-primary-color-foreground-active,//-primary-color-foreground-active, 
+    $button-primary-color-foreground-disabled,//-primary-color-foreground-disabled, 
+    $button-primary-color-background-normal,//-primary-color-background-normal, 
+    $button-primary-color-background-focus,//-primary-color-background-focus, 
+    $button-primary-color-background-active,//-primary-color-background-active, 
+    $button-primary-color-background-disabled,//-primary-color-background-disabled, 
+    $button-secondary-color-foreground-normal,//-secondary-color-foreground-normal, 
+    $button-secondary-color-foreground-focus,//-secondary-color-foreground-focus, 
+    $button-secondary-color-foreground-active,//-secondary-color-foreground-active, 
+    $button-secondary-color-foreground-disabled,//-secondary-color-foreground-disabled, 
+    $button-secondary-color-background-normal,//-secondary-color-background-normal, 
+    $button-secondary-color-background-focus,//-secondary-color-background-focus, 
+    $button-secondary-color-background-active,//-secondary-color-background-active, 
+    $button-secondary-color-background-disabled); //-secondary-color-background-disabled)
+
+    @include build-button-set(
+        '.button-round',                  //selector
+        'Santander Icons',               //font-family, 
+        $font-size-round,                 //font-size, , 
+        $height-round,                    //height
+        $min-width-round,                 //min-width, 
+        $border-radius-round,             //-radius, 
+        $shadow,//-shadow, 
+        $border,//-border-, 
+        $padding-x-round,//padding-x, 
+        $padding-y-round,//padding-y, 
+        $button-primary-color-foreground-normal,//-primary-color-foreground-normal, 
+        $button-primary-color-foreground-focus,//-primary-color-foreground-focus, 
+        $button-primary-color-foreground-active,//-primary-color-foreground-active, 
+        $button-primary-color-foreground-disabled,//-primary-color-foreground-disabled, 
+        $button-primary-color-background-normal,//-primary-color-background-normal, 
+        $button-primary-color-background-focus,//-primary-color-background-focus, 
+        $button-primary-color-background-active,//-primary-color-background-active, 
+        $button-primary-color-background-disabled,//-primary-color-background-disabled, 
+        $button-secondary-color-foreground-normal,//-secondary-color-foreground-normal, 
+        $button-secondary-color-foreground-focus,//-secondary-color-foreground-focus, 
+        $button-secondary-color-foreground-active,//-secondary-color-foreground-active, 
+        $button-secondary-color-foreground-disabled,//-secondary-color-foreground-disabled, 
+        $button-secondary-color-background-normal,//-secondary-color-background-normal, 
+        $button-secondary-color-background-focus,//-secondary-color-background-focus, 
+        $button-secondary-color-background-active,//-secondary-color-background-active, 
+        $button-secondary-color-background-disabled); //-secondary-color-background-disabled)
+}
+
