@@ -4,9 +4,9 @@
 $button-font-family: f.$font-primary-family;
 
 $button-primary-color-background-normal:  p.$ccap-palette-color-blue;
-$button-primary-color-background-focus: p.$ccap-palette-color-blue-hover;
-$button-primary-color-background-active: p.$ccap-palette-color-blue-active;
-$button-primary-color-background-disabled: p.$ccap-palette-color-gray-400;
+$button-primary-color-background-focus: p.$ccap-palette-color-blue-horizon;
+$button-primary-color-background-active: p.$ccap-palette-color-blue-horizon;
+$button-primary-color-background-disabled: p.$ccap-palette-color-grey-lightest;
 
 $button-primary-color-foreground-normal: p.$ccap-palette-color-white;
 $button-primary-color-foreground-focus: p.$ccap-palette-color-white;
@@ -14,9 +14,9 @@ $button-primary-color-foreground-active: p.$ccap-palette-color-white;
 $button-primary-color-foreground-disabled: p.$ccap-palette-color-white;
 
 $button-secondary-color-foreground-normal:  p.$ccap-palette-color-blue;
-$button-secondary-color-foreground-focus: p.$ccap-palette-color-blue-hover;
-$button-secondary-color-foreground-active: p.$ccap-palette-color-blue-active;
-$button-secondary-color-foreground-disabled: p.$ccap-palette-color-gray-400;
+$button-secondary-color-foreground-focus: p.$ccap-palette-color-blue-horizon;
+$button-secondary-color-foreground-active: p.$ccap-palette-color-blue-horizon;
+$button-secondary-color-foreground-disabled: p.$ccap-palette-color-grey-lightest;
 
 $button-secondary-color-background-normal: p.$ccap-palette-color-white;
 $button-secondary-color-background-focus: p.$ccap-palette-color-white;

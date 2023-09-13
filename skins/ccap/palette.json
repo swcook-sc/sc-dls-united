@@ -1,0 +1,38 @@
+{
+    "palette" :
+    [
+        {   "name": "blue-edge", "value": "#002538", "use": "Primary brand color used for navigational elements"},
+        {   "name": "blue-horizon", "value": "#007BBA", "use": "Use for interactive elements, CTAs, and icons"},
+        {   "name": "blue-deep", "value": "#006699", "use": "Use for links"},
+        {   "name": "blue-sky", "value": "#A1C7E3", "use": "Border for input fields and backgrounds"},
+        {   "name": "background", "value": "#F5F9FC", "use": "Background color"},
+        {   "name": "white", "value": "#FFFFFF", "use": "Reverse text color and component color"},
+        {   "name": "grey-darkest", "value": "#313234", "use": "Default text color"},
+        {   "name": "grey-dark", "value": "#5F6062", "use": "Labels for input fields"},
+        {   "name": "grey", "value": "#AFAFB0", "use": "Horizontal lines and ghost text"},
+        {   "name": "grey-light", "value": "#CFCFCF", "use": "Disabled text and border"},
+        {   "name": "grey-lightest", "value": "#EFEFEF", "use": "Disabled background  color"},
+        {   "name": "red-dark", "value": "#91000F", "use": "Errors"},
+        {   "name": "red", "value": "#C31E1E", "use": "Errors"},
+        {   "name": "red-light", "value": "#FFDEDE", "use": "Errors"},
+        {   "name": "blue-dark", "value": "#154F88", "use": "Information"},
+        {   "name": "blue", "value": "#156BAD", "use": "Information"},
+        {   "name": "blue-light", "value": "#DCE9F3", "use": "Information"},
+        {   "name": "blue-edge-10", "value": "#001925", "use": "Blue shades"},
+        {   "name": "blue-edge-9", "value": "#00314a", "use": "Blue shades"},
+        {   "name": "blue-edge-8", "value": "#004a70", "use": "Blue shades"},
+        {   "name": "blue-edge-7", "value": "#005580", "use": "Blue shades"},
+        {   "name": "blue-edge-6", "value": "#006699", "use": "Blue shades"},
+        {   "name": "blue-edge-5", "value": "#4DA3CF", "use": "Blue shades"},
+        {   "name": "blue-edge-4", "value": "#66B0D6", "use": "Blue shades"},
+        {   "name": "blue-edge-3", "value": "#99CAE3", "use": "Blue shades"},
+        {   "name": "blue-edge-2", "value": "#B2D7EA", "use": "Blue shades"},
+        {   "name": "blue-edge-1", "value": "#CCE5F1", "use": "Blue shades"},
+        {   "name": "green-dark", "value": "#146432", "use": "Success"},
+        {   "name": "green", "value": "#15822D", "use": "Success"},
+        {   "name": "green-light", "value": "#E2F8E7", "use": "Success"},
+        {   "name": "orange-dark", "value": "#896B00", "use": "Warning"},
+        {   "name": "orange", "value": "#E8C300", "use": "Warning"},
+        {   "name": "orange-light", "value": "#FDF9D7", "use": "Warning"}
+    ]
+}

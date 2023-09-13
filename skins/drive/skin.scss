@@ -133,6 +133,8 @@ $someValue: "Drive";
 
     @include input-mix.buildInputs(a.$font-secondary-family, 
         a.$text-color-default, 
+        a.$background-color-default,
+        a.$background-color-soft,
         a.$drive-palette-color-mint,
         a.$drive-palette-color-neutral-40,
         a.$drive-palette-color-black,
