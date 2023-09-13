@@ -3,20 +3,20 @@
 
 $button-font-family: f.$font-primary-family;
 
-$button-primary-color-background-normal:  p.$ccap-palette-color-blue;
-$button-primary-color-background-focus: p.$ccap-palette-color-blue-horizon;
-$button-primary-color-background-active: p.$ccap-palette-color-blue-horizon;
+$button-primary-color-background-normal:  p.$ccap-palette-color-blue-horizon;
+$button-primary-color-background-focus: p.$ccap-palette-color-blue-deep;
+$button-primary-color-background-active: p.$ccap-palette-color-blue-edge-7;
 $button-primary-color-background-disabled: p.$ccap-palette-color-grey-lightest;
 
 $button-primary-color-foreground-normal: p.$ccap-palette-color-white;
 $button-primary-color-foreground-focus: p.$ccap-palette-color-white;
 $button-primary-color-foreground-active: p.$ccap-palette-color-white;
-$button-primary-color-foreground-disabled: p.$ccap-palette-color-white;
+$button-primary-color-foreground-disabled: p.$ccap-palette-color-grey;
 
-$button-secondary-color-foreground-normal:  p.$ccap-palette-color-blue;
-$button-secondary-color-foreground-focus: p.$ccap-palette-color-blue-horizon;
-$button-secondary-color-foreground-active: p.$ccap-palette-color-blue-horizon;
-$button-secondary-color-foreground-disabled: p.$ccap-palette-color-grey-lightest;
+$button-secondary-color-foreground-normal:  p.$ccap-palette-color-blue-horizon;
+$button-secondary-color-foreground-focus: p.$ccap-palette-color-blue-deep;
+$button-secondary-color-foreground-active: p.$ccap-palette-color-blue-edge-7;
+$button-secondary-color-foreground-disabled: p.$ccap-palette-color-grey-dark;
 
 $button-secondary-color-background-normal: p.$ccap-palette-color-white;
 $button-secondary-color-background-focus: p.$ccap-palette-color-white;
@@ -29,10 +29,10 @@ $button-secondary-color-foreground-normal, $button-secondary-color-foreground-fo
 $button-secondary-color-background-normal, $button-secondary-color-background-focus, $button-secondary-color-background-active, $button-secondary-color-background-disabled;
 
 
-$button-border-radius: 0.75rem;
+$button-border-radius: 0.5rem;
 
 $button-font-size: 1.125rem;
-$button-height: 2.625rem;
+$button-height: 3rem;
 $button-min-width: 12.5rem;
 $button-padding-x: 0.625rem;
 $button-padding-side: 2.25rem;
@@ -52,7 +52,7 @@ $button-small-padding: 1.6rem;;
 $button-small-height: 2rem;
 $button-small-font-size: 1.8rem;
 $button-small-min-width: 6rem;
-$button-small-border-radius: .75rem;
+$button-small-border-radius: .5rem;
 
 // round button
 $button-round-height: 2.25rem;

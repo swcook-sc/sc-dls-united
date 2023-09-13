@@ -87,9 +87,9 @@
 
     @include input-mix.buildInputs(a.$font-secondary-family, 
         a.$text-color-default, 
-        a.$ccap-palette-color-background,
+        a.$ccap-palette-color-white,
         a.$background-color-soft,
-        a.$ccap-palette-color-blue-sky,
+        a.$ccap-palette-color-blue-deep,
         a.$ccap-palette-color-blue,
         a.$ccap-palette-color-blue-sky,
         a.$ccap-palette-color-grey-dark,
@@ -98,12 +98,51 @@
 
     .item {
         padding: 0.5rem;
-        background-color: a.$ccap-palette-color-blue-edge;
+        background-color: a.$ccap-palette-color-blue-horizon;
         color: a.$ccap-palette-color-white;
         font-weight: a.$font-weight-bold;
 
         &::before {
             content: $someValue;
         }
+    }
+
+    .button,
+    .button-small,
+    .button-round  {
+        &.secondary {
+            &[disabled] {
+                border: solid 2px a.$ccap-palette-color-grey-light;
+            }
+
+            &__hover__,
+            &:hover,
+            &:focus {
+                outline: 2px solid a.$ccap-palette-color-blue;
+            }
+        }
+
+        &__hover__,
+        &:hover,
+        &:focus {
+            outline: 2px solid a.$ccap-palette-color-blue;
+        }
+    }
+
+    progress {
+        -webkit-appearance: none;
+        width: 100%;
+        height: .25rem;
+
+        &::-webkit-progress-bar {
+            border-radius: .5rem;
+            background-color: a.$background-color-soft;
+        }
+
+        &::-webkit-progress-value {
+            background-color: a.$background-color-brand;
+            border-radius: .5rem;
+        }
+
     }
 }

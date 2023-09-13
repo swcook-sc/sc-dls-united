@@ -1,16 +1,16 @@
 @use './palette.scss' as p;
 
-$link-primary-color: p.$ccap-palette-color-blue;
-$link-primary-color-hover: p.$ccap-palette-color-blue-horizon;
-$link-primary-color-pressed: p.$ccap-palette-color-blue-horizon;
-$link-primary-color-visited: p.$ccap-palette-color-blue;
-$link-primary-color-disabled: p.$ccap-palette-color-grey-lightest;
+$link-primary-color: p.$ccap-palette-color-blue-deep;
+$link-primary-color-hover: p.$ccap-palette-color-blue-deep;
+$link-primary-color-pressed: p.$ccap-palette-color-blue-deep;
+$link-primary-color-visited: p.$ccap-palette-color-blue-edge-8;
+$link-primary-color-disabled: p.$ccap-palette-color-grey-light;
 
-$link-secondary-color: p.$ccap-palette-color-blue;
-$link-secondary-color-hover: p.$ccap-palette-color-blue-horizon;
-$link-secondary-color-pressed: p.$ccap-palette-color-blue-horizon;
-$link-secondary-color-visited: p.$ccap-palette-color-blue;
-$link-secondary-color-disabled: p.$ccap-palette-color-grey-lightest;
+$link-secondary-color: p.$ccap-palette-color-blue-deep;
+$link-secondary-color-hover: p.$ccap-palette-color-blue-deep;
+$link-secondary-color-pressed: p.$ccap-palette-color-blue-deep;
+$link-secondary-color-visited: p.$ccap-palette-color-blue-edge-8;
+$link-secondary-color-disabled: p.$ccap-palette-color-grey-light;
 
 $links-colors: 
 $link-primary-color, $link-primary-color-hover, $link-primary-color-pressed, $link-primary-color-visited, $link-primary-color-disabled,
