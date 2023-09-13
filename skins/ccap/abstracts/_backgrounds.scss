@@ -1,13 +1,13 @@
 @use './palette' as p;
 
 $background-color-default: p.$ccap-palette-color-white;
-$background-color-alternate: p.$ccap-palette-color-blue;
-$background-color-soft: p.$ccap-palette-color-gray-300;
-$background-color-strong: p.$ccap-palette-color-gray-500;
-$background-color-inverted: p.$ccap-palette-color-gray-900;
-$background-color-brand: p.$ccap-palette-color-blue;
-$background-color-overlay: p.$ccap-palette-color-gray-500;
-$background-color-info: p.$ccap-palette-color-cyan-100;
-$background-color-success: p.$ccap-palette-color-green-100;
-$background-color-warning: p.$ccap-palette-color-yellow-100;
-$background-color-error: p.$ccap-palette-color-red-100;
+$background-color-alternate: p.$ccap-palette-color-blue-light;
+$background-color-soft: p.$ccap-palette-color-grey-light;
+$background-color-strong: p.$ccap-palette-color-grey;
+$background-color-inverted: p.$ccap-palette-color-grey-darkest;
+$background-color-brand: p.$ccap-palette-color-blue-edge;
+$background-color-overlay: p.$ccap-palette-color-grey;
+$background-color-info: p.$ccap-palette-color-blue-light;
+$background-color-success: p.$ccap-palette-color-green-light;
+$background-color-warning: p.$ccap-palette-color-orange-light;
+$background-color-error: p.$ccap-palette-color-red-light;

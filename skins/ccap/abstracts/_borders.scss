@@ -1,12 +1,12 @@
 @use './palette' as p;
 
-$border-color-default: p.$ccap-palette-color-gray-400;
-$border-color-soft: p.$ccap-palette-color-gray-200;
-$border-color-hover: p.$ccap-palette-color-gray-900;
-$border-color-disabled: p.$ccap-palette-color-gray-200;
-$border-color-alternate: p.$ccap-palette-color-cyan-200;
-$border-color-inverted: p.$ccap-palette-color-white;
-$border-color-info: p.$ccap-palette-color-indigo-400;
-$border-color-success: p.$ccap-palette-color-green-400;
-$border-color-warning: p.$ccap-palette-color-yellow-400;
-$border-color-error: p.$ccap-palette-color-red-400;
+$border-color-default: p.$ccap-palette-color-white;
+$border-color-soft: p.$ccap-palette-color-grey;
+$border-color-hover: p.$ccap-palette-color-grey-light;
+$border-color-disabled: p.$ccap-palette-color-grey-lightest;
+$border-color-alternate: p.$ccap-palette-color-blue-horizon;
+$border-color-inverted: p.$ccap-palette-color-grey-darkest;
+$border-color-info: p.$ccap-palette-color-blue-dark;
+$border-color-success: p.$ccap-palette-color-green-dark;
+$border-color-warning: p.$ccap-palette-color-orange-dark;
+$border-color-error: p.$ccap-palette-color-red-dark;

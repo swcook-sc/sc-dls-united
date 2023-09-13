@@ -98,6 +98,8 @@ $someValue: "Santander Consumer USA";
 
     @include input-mix.buildInputs(a.$font-secondary-family, 
         a.$text-color-default, 
+        a.$background-color-default,
+        a.$background-color-soft,
         a.$sc-palette-color-turquoise-75,
         a.$sc-palette-color-neutral-45,
         a.$sc-palette-color-neutral-95,

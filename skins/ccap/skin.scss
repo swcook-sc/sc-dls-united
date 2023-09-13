@@ -87,17 +87,19 @@
 
     @include input-mix.buildInputs(a.$font-secondary-family, 
         a.$text-color-default, 
-        a.$ccap-palette-color-primary,
+        a.$ccap-palette-color-background,
+        a.$background-color-soft,
+        a.$ccap-palette-color-blue-sky,
         a.$ccap-palette-color-blue,
-        a.$ccap-palette-color-blue-active,
-        a.$ccap-palette-color-gray-700,
+        a.$ccap-palette-color-blue-sky,
+        a.$ccap-palette-color-grey-dark,
         0.25rem);
 
 
     .item {
         padding: 0.5rem;
-        background-color: a.$ccap-palette-color-primary;
-        color: white;
+        background-color: a.$ccap-palette-color-blue-edge;
+        color: a.$ccap-palette-color-white;
         font-weight: a.$font-weight-bold;
 
         &::before {
