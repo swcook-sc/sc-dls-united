@@ -113,6 +113,10 @@
         }
     }
 
+    .generic-input  :has(input:focus) {
+        background-color: rgba($color: a.$ccap-palette-color-blue-light, $alpha: .4);
+    }
+
     .button,
     .button-small,
     .button-round  {
